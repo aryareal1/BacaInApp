@@ -104,14 +104,14 @@ namespace BacaIn
             headingLabel.AutoSize = true;
             headingLabel.Dock = DockStyle.Fill;
             headingLabel.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            headingLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            headingLabel.ForeColor = Color.FromArgb(26, 26, 26);
             headingLabel.Margin = new Padding(0, 0, 0, 16);
             headingLabel.Text = "View Reports";
             // previewLabel
             previewLabel.AutoSize = true;
             previewLabel.Dock = DockStyle.Fill;
             previewLabel.Font = new Font("Segoe UI", 10.5F);
-            previewLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            previewLabel.ForeColor = Color.FromArgb(102, 102, 102);
             previewLabel.Margin = new Padding(0, 0, 0, 16);
             previewLabel.Text = "Design preview — report generation and printing are not connected. Report type and dates are layout controls only; this empty Loans & Returns preview does not change.";
             previewLabel.UseMnemonic = false;
@@ -119,14 +119,14 @@ namespace BacaIn
             periodNoteLabel.AutoSize = true;
             periodNoteLabel.Dock = DockStyle.Fill;
             periodNoteLabel.Font = new Font("Segoe UI", 10F);
-            periodNoteLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            periodNoteLabel.ForeColor = Color.FromArgb(102, 102, 102);
             periodNoteLabel.Margin = new Padding(0, 0, 0, 16);
             periodNoteLabel.Text = "Loans issued and returns are period totals. Overdue now is a current count, independent of the selected period. No values are connected.";
             // tableHeadingLabel
             tableHeadingLabel.AutoSize = true;
             tableHeadingLabel.Dock = DockStyle.Fill;
             tableHeadingLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            tableHeadingLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            tableHeadingLabel.ForeColor = Color.FromArgb(26, 26, 26);
             tableHeadingLabel.Margin = new Padding(0, 0, 0, 16);
             tableHeadingLabel.Text = "Loans & Returns preview";
             tableHeadingLabel.UseMnemonic = false;
@@ -158,11 +158,11 @@ namespace BacaIn
             reportTypeLabel.Text = "Report type";
             // reportTypeComboBox
             reportTypeComboBox.AccessibleName = "Report type";
-            reportTypeComboBox.BorderColor = Color.FromArgb(120, 135, 126);
+            reportTypeComboBox.BorderColor = Color.FromArgb(128, 128, 128);
             reportTypeComboBox.BorderRadius = 6;
             reportTypeComboBox.FillColor = Color.White;
             reportTypeComboBox.Font = new Font("Segoe UI", 10.5F);
-            reportTypeComboBox.ForeColor = Color.FromArgb(36, 51, 46);
+            reportTypeComboBox.ForeColor = Color.FromArgb(26, 26, 26);
             reportTypeComboBox.Margin = new Padding(0);
             reportTypeComboBox.Size = new Size(230, 40);
             reportTypeComboBox.TabIndex = 0;
@@ -187,11 +187,11 @@ namespace BacaIn
             fromLabel.Text = "From";
             // fromDatePicker
             fromDatePicker.AccessibleName = "From";
-            fromDatePicker.BorderColor = Color.FromArgb(120, 135, 126);
+            fromDatePicker.BorderColor = Color.FromArgb(128, 128, 128);
             fromDatePicker.BorderRadius = 6;
             fromDatePicker.FillColor = Color.White;
             fromDatePicker.Font = new Font("Segoe UI", 10.5F);
-            fromDatePicker.ForeColor = Color.FromArgb(36, 51, 46);
+            fromDatePicker.ForeColor = Color.FromArgb(26, 26, 26);
             fromDatePicker.Margin = new Padding(0);
             fromDatePicker.Size = new Size(180, 40);
             fromDatePicker.TabIndex = 0;
@@ -216,11 +216,11 @@ namespace BacaIn
             toLabel.Text = "To";
             // toDatePicker
             toDatePicker.AccessibleName = "To";
-            toDatePicker.BorderColor = Color.FromArgb(120, 135, 126);
+            toDatePicker.BorderColor = Color.FromArgb(128, 128, 128);
             toDatePicker.BorderRadius = 6;
             toDatePicker.FillColor = Color.White;
             toDatePicker.Font = new Font("Segoe UI", 10.5F);
-            toDatePicker.ForeColor = Color.FromArgb(36, 51, 46);
+            toDatePicker.ForeColor = Color.FromArgb(26, 26, 26);
             toDatePicker.Margin = new Padding(0);
             toDatePicker.Size = new Size(180, 40);
             toDatePicker.TabIndex = 0;
@@ -230,7 +230,7 @@ namespace BacaIn
             reportTypeComboBox.ItemHeight = 34;
             reportTypeComboBox.Items.AddRange(new object[] { "Loans & Returns", "Inventory", "Reservations", "Check-ins" });
             reportTypeComboBox.SelectedIndex = 0;
-            reportTypeComboBox.FocusedState.BorderColor = Color.FromArgb(47, 93, 80);
+            reportTypeComboBox.FocusedState.BorderColor = Color.FromArgb(57, 112, 41);
             // fromDatePicker
             fromDatePicker.BorderThickness = 1;
             fromDatePicker.Format = DateTimePickerFormat.Custom;
@@ -252,36 +252,36 @@ namespace BacaIn
             // applyButton
             applyButton.AccessibleName = "Apply";
             applyButton.AccessibleDescription = "Design preview only; action is not connected.";
-            applyButton.BorderColor = Color.FromArgb(120, 135, 126);
+            applyButton.BorderColor = Color.FromArgb(128, 128, 128);
             applyButton.BorderThickness = 0;
             applyButton.BorderRadius = 6;
-            applyButton.FillColor = Color.FromArgb(47, 93, 80);
+            applyButton.FillColor = Color.FromArgb(57, 112, 41);
             applyButton.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             applyButton.ForeColor = Color.White;
             applyButton.Margin = new Padding(0, 0, 8, 0);
             applyButton.Size = new Size(100, 40);
             applyButton.TabIndex = 0;
             applyButton.Text = "Apply";
-            applyButton.HoverState.FillColor = Color.FromArgb(36, 72, 62);
-            applyButton.FocusedColor = Color.FromArgb(120, 135, 126);
-            applyButton.PressedColor = Color.FromArgb(36, 72, 62);
+            applyButton.HoverState.FillColor = Color.FromArgb(38, 74, 28);
+            applyButton.FocusedColor = Color.FromArgb(128, 128, 128);
+            applyButton.PressedColor = Color.FromArgb(38, 74, 28);
             actionsLayout.Controls.Add(printButton);
             // printButton
             printButton.AccessibleName = "Print / Save PDF";
             printButton.AccessibleDescription = "Design preview only; action is not connected.";
-            printButton.BorderColor = Color.FromArgb(120, 135, 126);
+            printButton.BorderColor = Color.FromArgb(128, 128, 128);
             printButton.BorderThickness = 1;
             printButton.BorderRadius = 6;
             printButton.FillColor = Color.White;
             printButton.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            printButton.ForeColor = Color.FromArgb(47, 93, 80);
+            printButton.ForeColor = Color.FromArgb(57, 112, 41);
             printButton.Margin = new Padding(0, 0, 8, 0);
             printButton.Size = new Size(170, 40);
             printButton.TabIndex = 1;
             printButton.Text = "Print / Save PDF";
-            printButton.HoverState.FillColor = Color.FromArgb(229, 239, 232);
-            printButton.FocusedColor = Color.FromArgb(120, 135, 126);
-            printButton.PressedColor = Color.FromArgb(36, 72, 62);
+            printButton.HoverState.FillColor = Color.FromArgb(223, 241, 218);
+            printButton.FocusedColor = Color.FromArgb(128, 128, 128);
+            printButton.PressedColor = Color.FromArgb(38, 74, 28);
             // summaryLayout
             summaryLayout.AutoSize = true;
             summaryLayout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -293,7 +293,7 @@ namespace BacaIn
             // loansCard
             loansCard.AutoSize = true;
             loansCard.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            loansCard.BorderColor = Color.FromArgb(216, 223, 216);
+            loansCard.BorderColor = Color.FromArgb(204, 204, 204);
             loansCard.BorderThickness = 1;
             loansCard.BorderRadius = 8;
             loansCard.FillColor = Color.White;
@@ -324,14 +324,14 @@ namespace BacaIn
             loansValueLabel.AutoSize = true;
             loansValueLabel.AccessibleName = "Loans issued unavailable";
             loansValueLabel.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
-            loansValueLabel.ForeColor = Color.FromArgb(47, 93, 80);
+            loansValueLabel.ForeColor = Color.FromArgb(57, 112, 41);
             loansValueLabel.Margin = new Padding(0);
             loansValueLabel.Text = "—";
             summaryLayout.Controls.Add(returnsCard);
             // returnsCard
             returnsCard.AutoSize = true;
             returnsCard.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            returnsCard.BorderColor = Color.FromArgb(216, 223, 216);
+            returnsCard.BorderColor = Color.FromArgb(204, 204, 204);
             returnsCard.BorderThickness = 1;
             returnsCard.BorderRadius = 8;
             returnsCard.FillColor = Color.White;
@@ -362,14 +362,14 @@ namespace BacaIn
             returnsValueLabel.AutoSize = true;
             returnsValueLabel.AccessibleName = "Returns unavailable";
             returnsValueLabel.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
-            returnsValueLabel.ForeColor = Color.FromArgb(47, 93, 80);
+            returnsValueLabel.ForeColor = Color.FromArgb(57, 112, 41);
             returnsValueLabel.Margin = new Padding(0);
             returnsValueLabel.Text = "—";
             summaryLayout.Controls.Add(overdueCard);
             // overdueCard
             overdueCard.AutoSize = true;
             overdueCard.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            overdueCard.BorderColor = Color.FromArgb(216, 223, 216);
+            overdueCard.BorderColor = Color.FromArgb(204, 204, 204);
             overdueCard.BorderThickness = 1;
             overdueCard.BorderRadius = 8;
             overdueCard.FillColor = Color.White;
@@ -400,27 +400,27 @@ namespace BacaIn
             overdueValueLabel.AutoSize = true;
             overdueValueLabel.AccessibleName = "Overdue now unavailable";
             overdueValueLabel.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
-            overdueValueLabel.ForeColor = Color.FromArgb(47, 93, 80);
+            overdueValueLabel.ForeColor = Color.FromArgb(57, 112, 41);
             overdueValueLabel.Margin = new Padding(0);
             overdueValueLabel.Text = "—";
             // headerStyle
-            headerStyle.BackColor = Color.FromArgb(229, 239, 232);
-            headerStyle.ForeColor = Color.FromArgb(36, 51, 46);
+            headerStyle.BackColor = Color.FromArgb(223, 241, 218);
+            headerStyle.ForeColor = Color.FromArgb(26, 26, 26);
             headerStyle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            headerStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            headerStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            headerStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            headerStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             headerStyle.WrapMode = DataGridViewTriState.True;
             // rowStyle
             rowStyle.BackColor = Color.White;
-            rowStyle.ForeColor = Color.FromArgb(36, 51, 46);
+            rowStyle.ForeColor = Color.FromArgb(26, 26, 26);
             rowStyle.Font = new Font("Segoe UI", 10.5F);
-            rowStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            rowStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            rowStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            rowStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             // alternateStyle
-            alternateStyle.BackColor = Color.FromArgb(247, 248, 244);
-            alternateStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            alternateStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            alternateStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            alternateStyle.BackColor = Color.FromArgb(242, 242, 242);
+            alternateStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            alternateStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            alternateStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             // reportGrid
             reportGrid.AccessibleName = "Empty Loans and Returns report preview";
             reportGrid.AccessibleDescription = "Design preview only. No report has been generated.";
@@ -441,7 +441,7 @@ namespace BacaIn
             reportGrid.AlternatingRowsDefaultCellStyle = alternateStyle;
             reportGrid.Dock = DockStyle.Fill;
             reportGrid.EnableHeadersVisualStyles = false;
-            reportGrid.GridColor = Color.FromArgb(216, 223, 216);
+            reportGrid.GridColor = Color.FromArgb(204, 204, 204);
             reportGrid.Margin = new Padding(0);
             reportGrid.MinimumSize = new Size(280, 220);
             reportGrid.MultiSelect = false;
@@ -468,15 +468,15 @@ namespace BacaIn
             returnsColumn.FillWeight = 23F;
             returnsColumn.ReadOnly = true;
             returnsColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
-            reportGrid.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(229, 239, 232);
-            reportGrid.ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(36, 51, 46);
+            reportGrid.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(223, 241, 218);
+            reportGrid.ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(26, 26, 26);
             reportGrid.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             reportGrid.ThemeStyle.HeaderStyle.Height = 48;
             reportGrid.ThemeStyle.RowsStyle.BackColor = Color.White;
-            reportGrid.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            reportGrid.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            reportGrid.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
-            reportGrid.ThemeStyle.GridColor = Color.FromArgb(216, 223, 216);
+            reportGrid.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            reportGrid.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            reportGrid.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
+            reportGrid.ThemeStyle.GridColor = Color.FromArgb(204, 204, 204);
             // totalsLayout
             totalsLayout.AutoSize = true;
             totalsLayout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -584,8 +584,8 @@ namespace BacaIn
             totalReturnsLabel.Name = "totalReturnsLabel";
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(247, 248, 244);
-            ForeColor = Color.FromArgb(36, 51, 46);
+            BackColor = Color.FromArgb(242, 242, 242);
+            ForeColor = Color.FromArgb(26, 26, 26);
             Font = new Font("Segoe UI", 9F);
             Controls.Add(pageLayout);
             Name = "ReportsPage";

@@ -2,7 +2,7 @@
 
 ## Direction
 
-**Forest & Paper:** muted green, warm off-white, and dark charcoal.
+**Forest & Paper:** crisp forest green, clean light background, and deep charcoal.
 
 BacaIn is a school-library application for students and librarians. Its interface should feel calm, approachable, and academic without looking dated. Prioritize readable catalogs, clear borrowing states, and efficient library administration over decoration.
 
@@ -12,20 +12,84 @@ The diagram's dark background is not an application theme requirement. Use a lig
 
 ## Color Palette
 
-| Role | Color | Usage |
-| --- | --- | --- |
-| Page background | `#F7F8F4` | Main application canvas and login background |
-| Surface | `#FFFFFF` | Cards, tables, sidebar, dialogs, and inputs |
-| Primary | `#2F5D50` | Primary actions, links, and active navigation text |
-| Primary hover | `#24483E` | Hover state for primary actions |
-| Selected background | `#E5EFE8` | Selected navigation items and subtle selection surfaces |
-| Main text | `#24332E` | Headings, labels, and body text |
-| Secondary text | `#5F6F67` | Supporting descriptions and metadata |
-| Subtle divider | `#D8DFD8` | Table separators and decorative boundaries |
-| Control border | `#78877E` | Input and outlined-button boundaries |
-| Decorative accent | `#C49A45` | Small decorative details only |
+| Role | Color | Token | Usage |
+| --- | --- | --- | --- |
+| Page background | `#F2F2F2` | `--background-50` | Main application canvas and login background |
+| Surface | `#FFFFFF` | N/A | Cards, tables, sidebar, dialogs, and inputs |
+| Primary | `#397029` | `--primary-700` | Primary actions, links, and active navigation text |
+| Primary hover | `#264A1C` | `--primary-800` | Hover state for primary actions |
+| Selected background | `#DFF1DA` | `--primary-100` | Selected navigation items and subtle selection surfaces |
+| Main text | `#1A1A1A` | `--text-900` | Headings, labels, and body text |
+| Secondary text | `#666666` | `--text-600` | Supporting descriptions and metadata |
+| Subtle divider | `#CCCCCC` | `--background-200` | Table separators and decorative boundaries |
+| Control border | `#808080` | `--background-500` / `--text-500` | Input and outlined-button boundaries |
+| Decorative accent | `#76C33C` | `--accent-500` | Small decorative details only |
 
-Neutral backgrounds and white surfaces should occupy most of each screen. Green identifies interaction and selection. Gold is optional: do not use it for body text, status indicators, or primary button fills.
+### Color Tokens
+
+```css
+--text-50: #f2f2f2;
+--text-100: #e6e6e6;
+--text-200: #cccccc;
+--text-300: #b3b3b3;
+--text-400: #999999;
+--text-500: #808080;
+--text-600: #666666;
+--text-700: #4d4d4d;
+--text-800: #333333;
+--text-900: #1a1a1a;
+--text-950: #0d0d0d;
+
+--background-50: #f2f2f2;
+--background-100: #e6e6e6;
+--background-200: #cccccc;
+--background-300: #b3b3b3;
+--background-400: #999999;
+--background-500: #808080;
+--background-600: #666666;
+--background-700: #4d4d4d;
+--background-800: #333333;
+--background-900: #1a1a1a;
+--background-950: #0d0d0d;
+
+--primary-50: #eff8ec;
+--primary-100: #dff1da;
+--primary-200: #bfe3b5;
+--primary-300: #9fd68f;
+--primary-400: #7ec86a;
+--primary-500: #5eba45;
+--primary-600: #4b9537;
+--primary-700: #397029;
+--primary-800: #264a1c;
+--primary-900: #13250e;
+--primary-950: #091307;
+
+--secondary-50: #f4faeb;
+--secondary-100: #e9f5d6;
+--secondary-200: #d2ebad;
+--secondary-300: #bce085;
+--secondary-400: #a5d65c;
+--secondary-500: #8fcc33;
+--secondary-600: #72a329;
+--secondary-700: #567a1f;
+--secondary-800: #395214;
+--secondary-900: #1d290a;
+--secondary-950: #0e1405;
+
+--accent-50: #f1f9eb;
+--accent-100: #e4f3d8;
+--accent-200: #c8e7b1;
+--accent-300: #addb8a;
+--accent-400: #92cf63;
+--accent-500: #76c33c;
+--accent-600: #5f9c30;
+--accent-700: #477524;
+--accent-800: #2f4e18;
+--accent-900: #18270c;
+--accent-950: #0c1406;
+```
+
+Neutral backgrounds and white surfaces should occupy most of each screen. Green identifies interaction and selection. Decorative accent is optional: do not use it for body text, status indicators, or primary button fills.
 
 ## Status Colors
 
@@ -101,7 +165,7 @@ Display **Damaged** as a condition label. It is not automatically an application
 
 - Use an off-white page and a white form panel.
 - Use green for the heading or logo and the primary login action.
-- Keep decoration restrained; optional gold details must not compete with the form.
+- Keep decoration restrained; optional accent details must not compete with the form.
 - `BacaIn/LoginForm.Designer.cs` implements a centered white `Guna2Panel`, an image-backed `Guna2PictureBox` logo, native autosizing labels, masked `Guna2TextBox` inputs, and a full-width primary `Guna2Button`. Native table layouts handle centering and resizing, with scrolling available when space is constrained.
 - Typography uses a 28pt bold brand heading, 11pt bold welcome and field labels, 11pt inputs and bold login action, and 10.5pt supporting copy. Welcome text, librarian-access guidance, and a school-library footer add context without introducing extra actions.
 - Original logo asset: `BacaIn/Assets/bacain-logo.png`, a transparent 512×512 open-book and leaf mark. `LoginForm.resx` embeds it; `Guna2PictureBox` displays it with `SizeMode.Zoom`, preserving its aspect ratio.
@@ -123,10 +187,11 @@ Calculated contrast for core palette pairs:
 
 | Foreground | Background | Contrast |
 | --- | --- | --- |
-| White `#FFFFFF` | Primary `#2F5D50` | 7.49:1 |
-| Main text `#24332E` | Page `#F7F8F4` | 12.40:1 |
-| Secondary text `#5F6F67` | Surface `#FFFFFF` | 5.31:1 |
-| Primary `#2F5D50` | Selected `#E5EFE8` | 6.37:1 |
+| White `#FFFFFF` | Primary `#397029` | 5.96:1 |
+| Main text `#1A1A1A` | Page `#F2F2F2` | 15.55:1 |
+| Secondary text `#666666` | Surface `#FFFFFF` | 5.74:1 |
+| Primary `#397029` | Selected `#DFF1DA` | 5.03:1 |
+
 
 These ratios validate specific color pairs, not the whole interface. Check actual rendered controls, focus indicators, scaling, and state combinations during implementation.
 

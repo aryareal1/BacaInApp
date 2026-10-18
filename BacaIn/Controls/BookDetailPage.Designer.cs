@@ -107,7 +107,7 @@ namespace BacaIn
             headingLabel.AutoSize = true;
             headingLabel.Dock = DockStyle.Fill;
             headingLabel.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            headingLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            headingLabel.ForeColor = Color.FromArgb(26, 26, 26);
             headingLabel.Margin = new Padding(0);
             headingLabel.Name = "headingLabel";
             headingLabel.TabIndex = 0;
@@ -118,7 +118,7 @@ namespace BacaIn
             studentLabel.Anchor = AnchorStyles.Right;
             studentLabel.AutoSize = true;
             studentLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            studentLabel.ForeColor = Color.FromArgb(47, 93, 80);
+            studentLabel.ForeColor = Color.FromArgb(57, 112, 41);
             studentLabel.Margin = new Padding(0);
             studentLabel.Name = "studentLabel";
             studentLabel.TabIndex = 1;
@@ -143,18 +143,18 @@ namespace BacaIn
             // 
             backButton.AccessibleName = "Back to catalog";
             backButton.AccessibleDescription = "Return to book catalog page";
-            backButton.BorderColor = Color.FromArgb(120, 135, 126);
+            backButton.BorderColor = Color.FromArgb(128, 128, 128);
             backButton.BorderRadius = 6;
             backButton.BorderThickness = 1;
             backButton.FillColor = Color.White;
-            backButton.FocusedColor = Color.FromArgb(47, 93, 80);
+            backButton.FocusedColor = Color.FromArgb(57, 112, 41);
             backButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            backButton.ForeColor = Color.FromArgb(36, 51, 46);
-            backButton.HoverState.BorderColor = Color.FromArgb(47, 93, 80);
-            backButton.HoverState.FillColor = Color.FromArgb(229, 239, 232);
+            backButton.ForeColor = Color.FromArgb(26, 26, 26);
+            backButton.HoverState.BorderColor = Color.FromArgb(57, 112, 41);
+            backButton.HoverState.FillColor = Color.FromArgb(223, 241, 218);
             backButton.Margin = new Padding(0);
             backButton.Name = "backButton";
-            backButton.PressedColor = Color.FromArgb(36, 72, 62);
+            backButton.PressedColor = Color.FromArgb(38, 74, 28);
             backButton.Size = new Size(160, 38);
             backButton.TabIndex = 0;
             backButton.Text = "← Back to Catalog";
@@ -162,7 +162,7 @@ namespace BacaIn
             // 
             // detailPanel
             // 
-            detailPanel.BorderColor = Color.FromArgb(216, 223, 216);
+            detailPanel.BorderColor = Color.FromArgb(204, 204, 204);
             detailPanel.BorderRadius = 8;
             detailPanel.BorderThickness = 1;
             detailPanel.Controls.Add(cardLayout);
@@ -212,11 +212,11 @@ namespace BacaIn
             // 
             // coverPanel
             // 
-            coverPanel.BorderColor = Color.FromArgb(216, 223, 216);
+            coverPanel.BorderColor = Color.FromArgb(204, 204, 204);
             coverPanel.BorderRadius = 6;
             coverPanel.BorderThickness = 1;
             coverPanel.Controls.Add(coverPlaceholderLabel);
-            coverPanel.FillColor = Color.FromArgb(247, 248, 244);
+            coverPanel.FillColor = Color.FromArgb(242, 242, 242);
             coverPanel.Margin = new Padding(0, 0, 16, 0);
             coverPanel.Name = "coverPanel";
             coverPanel.Size = new Size(135, 185);
@@ -226,7 +226,7 @@ namespace BacaIn
             // 
             coverPlaceholderLabel.Dock = DockStyle.Fill;
             coverPlaceholderLabel.Font = new Font("Segoe UI", 10F, FontStyle.Italic);
-            coverPlaceholderLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            coverPlaceholderLabel.ForeColor = Color.FromArgb(102, 102, 102);
             coverPlaceholderLabel.Location = new Point(0, 0);
             coverPlaceholderLabel.Margin = new Padding(0);
             coverPlaceholderLabel.Name = "coverPlaceholderLabel";
@@ -265,7 +265,7 @@ namespace BacaIn
             // 
             titleLabel.AutoSize = true;
             titleLabel.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            titleLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            titleLabel.ForeColor = Color.FromArgb(26, 26, 26);
             titleLabel.Margin = new Padding(0, 0, 0, 4);
             titleLabel.Name = "titleLabel";
             titleLabel.TabIndex = 0;
@@ -275,7 +275,7 @@ namespace BacaIn
             // 
             authorLabel.AutoSize = true;
             authorLabel.Font = new Font("Segoe UI", 10.5F);
-            authorLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            authorLabel.ForeColor = Color.FromArgb(102, 102, 102);
             authorLabel.Margin = new Padding(0, 0, 0, 4);
             authorLabel.Name = "authorLabel";
             authorLabel.TabIndex = 1;
@@ -285,7 +285,7 @@ namespace BacaIn
             // 
             publisherLabel.AutoSize = true;
             publisherLabel.Font = new Font("Segoe UI", 10.5F);
-            publisherLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            publisherLabel.ForeColor = Color.FromArgb(102, 102, 102);
             publisherLabel.Margin = new Padding(0, 0, 0, 4);
             publisherLabel.Name = "publisherLabel";
             publisherLabel.TabIndex = 2;
@@ -295,7 +295,7 @@ namespace BacaIn
             // 
             yearLabel.AutoSize = true;
             yearLabel.Font = new Font("Segoe UI", 10.5F);
-            yearLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            yearLabel.ForeColor = Color.FromArgb(102, 102, 102);
             yearLabel.Margin = new Padding(0, 0, 0, 4);
             yearLabel.Name = "yearLabel";
             yearLabel.TabIndex = 3;
@@ -305,7 +305,7 @@ namespace BacaIn
             // 
             isbnLabel.AutoSize = true;
             isbnLabel.Font = new Font("Segoe UI", 10.5F);
-            isbnLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            isbnLabel.ForeColor = Color.FromArgb(102, 102, 102);
             isbnLabel.Margin = new Padding(0, 0, 0, 10);
             isbnLabel.Name = "isbnLabel";
             isbnLabel.TabIndex = 4;
@@ -315,7 +315,7 @@ namespace BacaIn
             // 
             descriptionHeadingLabel.AutoSize = true;
             descriptionHeadingLabel.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            descriptionHeadingLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            descriptionHeadingLabel.ForeColor = Color.FromArgb(26, 26, 26);
             descriptionHeadingLabel.Margin = new Padding(0, 0, 0, 4);
             descriptionHeadingLabel.Name = "descriptionHeadingLabel";
             descriptionHeadingLabel.TabIndex = 5;
@@ -325,7 +325,7 @@ namespace BacaIn
             // 
             descriptionLabel.AutoSize = true;
             descriptionLabel.Font = new Font("Segoe UI", 10F);
-            descriptionLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            descriptionLabel.ForeColor = Color.FromArgb(102, 102, 102);
             descriptionLabel.Margin = new Padding(0);
             descriptionLabel.MaximumSize = new Size(600, 0);
             descriptionLabel.Name = "descriptionLabel";
@@ -352,7 +352,7 @@ namespace BacaIn
             availabilityLabel.Anchor = AnchorStyles.Left;
             availabilityLabel.AutoSize = true;
             availabilityLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            availabilityLabel.ForeColor = Color.FromArgb(47, 93, 80);
+            availabilityLabel.ForeColor = Color.FromArgb(57, 112, 41);
             availabilityLabel.Margin = new Padding(0);
             availabilityLabel.Name = "availabilityLabel";
             availabilityLabel.TabIndex = 0;
@@ -362,17 +362,17 @@ namespace BacaIn
             // 
             reserveButton.AccessibleName = "Reserve book";
             reserveButton.AccessibleDescription = "Design preview action. Book reservation is not connected.";
-            reserveButton.BorderColor = Color.FromArgb(47, 93, 80);
+            reserveButton.BorderColor = Color.FromArgb(57, 112, 41);
             reserveButton.BorderRadius = 6;
             reserveButton.BorderThickness = 1;
-            reserveButton.FillColor = Color.FromArgb(47, 93, 80);
-            reserveButton.FocusedColor = Color.FromArgb(36, 72, 62);
+            reserveButton.FillColor = Color.FromArgb(57, 112, 41);
+            reserveButton.FocusedColor = Color.FromArgb(38, 74, 28);
             reserveButton.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             reserveButton.ForeColor = Color.White;
-            reserveButton.HoverState.FillColor = Color.FromArgb(36, 72, 62);
+            reserveButton.HoverState.FillColor = Color.FromArgb(38, 74, 28);
             reserveButton.Margin = new Padding(0);
             reserveButton.Name = "reserveButton";
-            reserveButton.PressedColor = Color.FromArgb(36, 72, 62);
+            reserveButton.PressedColor = Color.FromArgb(38, 74, 28);
             reserveButton.Size = new Size(150, 40);
             reserveButton.TabIndex = 1;
             reserveButton.Text = "Reserve Book";
@@ -381,7 +381,7 @@ namespace BacaIn
             // 
             copiesHeadingLabel.AutoSize = true;
             copiesHeadingLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            copiesHeadingLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            copiesHeadingLabel.ForeColor = Color.FromArgb(26, 26, 26);
             copiesHeadingLabel.Margin = new Padding(0, 0, 0, 8);
             copiesHeadingLabel.Name = "copiesHeadingLabel";
             copiesHeadingLabel.TabIndex = 2;
@@ -394,7 +394,7 @@ namespace BacaIn
             copiesGrid.AllowUserToAddRows = false;
             copiesGrid.AllowUserToDeleteRows = false;
             copiesGrid.AllowUserToResizeRows = false;
-            alternateStyle.BackColor = Color.FromArgb(247, 248, 244);
+            alternateStyle.BackColor = Color.FromArgb(242, 242, 242);
             copiesGrid.AlternatingRowsDefaultCellStyle = alternateStyle;
             copiesGrid.AutoGenerateColumns = false;
             copiesGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -403,11 +403,11 @@ namespace BacaIn
             copiesGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             copiesGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             headerStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            headerStyle.BackColor = Color.FromArgb(229, 239, 232);
+            headerStyle.BackColor = Color.FromArgb(223, 241, 218);
             headerStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            headerStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            headerStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            headerStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            headerStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            headerStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            headerStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             headerStyle.WrapMode = DataGridViewTriState.True;
             copiesGrid.ColumnHeadersDefaultCellStyle = headerStyle;
             copiesGrid.ColumnHeadersHeight = 36;
@@ -419,14 +419,14 @@ namespace BacaIn
             cellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             cellStyle.BackColor = Color.White;
             cellStyle.Font = new Font("Segoe UI", 10F);
-            cellStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            cellStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            cellStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            cellStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            cellStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            cellStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             cellStyle.WrapMode = DataGridViewTriState.False;
             copiesGrid.DefaultCellStyle = cellStyle;
             copiesGrid.Dock = DockStyle.Fill;
             copiesGrid.EnableHeadersVisualStyles = false;
-            copiesGrid.GridColor = Color.FromArgb(216, 223, 216);
+            copiesGrid.GridColor = Color.FromArgb(204, 204, 204);
             copiesGrid.Margin = new Padding(0);
             copiesGrid.MinimumSize = new Size(0, 180);
             copiesGrid.MultiSelect = false;
@@ -466,7 +466,7 @@ namespace BacaIn
             previewLabel.AutoSize = true;
             previewLabel.Dock = DockStyle.Fill;
             previewLabel.Font = new Font("Segoe UI", 10F);
-            previewLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            previewLabel.ForeColor = Color.FromArgb(102, 102, 102);
             previewLabel.Margin = new Padding(0, 12, 0, 0);
             previewLabel.Name = "previewLabel";
             previewLabel.TabIndex = 3;
@@ -478,7 +478,7 @@ namespace BacaIn
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackColor = Color.FromArgb(247, 248, 244);
+            BackColor = Color.FromArgb(242, 242, 242);
             Controls.Add(pageLayout);
             Font = new Font("Segoe UI", 9F);
             Margin = new Padding(0);

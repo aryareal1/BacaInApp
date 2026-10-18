@@ -109,7 +109,7 @@ namespace BacaIn
             headingLabel.AutoSize = true;
             headingLabel.Dock = DockStyle.Fill;
             headingLabel.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            headingLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            headingLabel.ForeColor = Color.FromArgb(26, 26, 26);
             headingLabel.Margin = new Padding(0);
             headingLabel.Name = "headingLabel";
             headingLabel.TabIndex = 0;
@@ -120,7 +120,7 @@ namespace BacaIn
             studentLabel.Anchor = AnchorStyles.Right;
             studentLabel.AutoSize = true;
             studentLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            studentLabel.ForeColor = Color.FromArgb(47, 93, 80);
+            studentLabel.ForeColor = Color.FromArgb(57, 112, 41);
             studentLabel.Margin = new Padding(0);
             studentLabel.Name = "studentLabel";
             studentLabel.TabIndex = 1;
@@ -132,7 +132,7 @@ namespace BacaIn
             supportingLabel.AutoSize = true;
             supportingLabel.Dock = DockStyle.Fill;
             supportingLabel.Font = new Font("Segoe UI", 10.5F);
-            supportingLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            supportingLabel.ForeColor = Color.FromArgb(102, 102, 102);
             supportingLabel.Margin = new Padding(0, 0, 0, 20);
             supportingLabel.Name = "supportingLabel";
             supportingLabel.TabIndex = 1;
@@ -157,15 +157,15 @@ namespace BacaIn
             // statusComboBox
             // 
             statusComboBox.AccessibleName = "Reservation status filter";
-            statusComboBox.BorderColor = Color.FromArgb(120, 135, 126);
+            statusComboBox.BorderColor = Color.FromArgb(128, 128, 128);
             statusComboBox.BorderRadius = 6;
             statusComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             statusComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             statusComboBox.FillColor = Color.White;
-            statusComboBox.FocusedColor = Color.FromArgb(47, 93, 80);
-            statusComboBox.FocusedState.BorderColor = Color.FromArgb(47, 93, 80);
+            statusComboBox.FocusedColor = Color.FromArgb(57, 112, 41);
+            statusComboBox.FocusedState.BorderColor = Color.FromArgb(57, 112, 41);
             statusComboBox.Font = new Font("Segoe UI", 10.5F);
-            statusComboBox.ForeColor = Color.FromArgb(36, 51, 46);
+            statusComboBox.ForeColor = Color.FromArgb(26, 26, 26);
             statusComboBox.ItemHeight = 34;
             statusComboBox.Items.AddRange(new object[] {
             "Status: All",
@@ -215,7 +215,7 @@ namespace BacaIn
             // 
             // reservationsPanel
             // 
-            reservationsPanel.BorderColor = Color.FromArgb(216, 223, 216);
+            reservationsPanel.BorderColor = Color.FromArgb(204, 204, 204);
             reservationsPanel.BorderRadius = 8;
             reservationsPanel.BorderThickness = 1;
             reservationsPanel.Controls.Add(reservationsLayout);
@@ -249,7 +249,7 @@ namespace BacaIn
             reservationsGrid.AllowUserToAddRows = false;
             reservationsGrid.AllowUserToDeleteRows = false;
             reservationsGrid.AllowUserToResizeRows = false;
-            alternateStyle.BackColor = Color.FromArgb(247, 248, 244);
+            alternateStyle.BackColor = Color.FromArgb(242, 242, 242);
             reservationsGrid.AlternatingRowsDefaultCellStyle = alternateStyle;
             reservationsGrid.AutoGenerateColumns = false;
             reservationsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -258,11 +258,11 @@ namespace BacaIn
             reservationsGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             reservationsGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             headerStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            headerStyle.BackColor = Color.FromArgb(229, 239, 232);
+            headerStyle.BackColor = Color.FromArgb(223, 241, 218);
             headerStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            headerStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            headerStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            headerStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            headerStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            headerStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            headerStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             headerStyle.WrapMode = DataGridViewTriState.True;
             reservationsGrid.ColumnHeadersDefaultCellStyle = headerStyle;
             reservationsGrid.ColumnHeadersHeight = 36;
@@ -276,14 +276,14 @@ namespace BacaIn
             cellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             cellStyle.BackColor = Color.White;
             cellStyle.Font = new Font("Segoe UI", 10F);
-            cellStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            cellStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            cellStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            cellStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            cellStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            cellStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             cellStyle.WrapMode = DataGridViewTriState.False;
             reservationsGrid.DefaultCellStyle = cellStyle;
             reservationsGrid.Dock = DockStyle.Fill;
             reservationsGrid.EnableHeadersVisualStyles = false;
-            reservationsGrid.GridColor = Color.FromArgb(216, 223, 216);
+            reservationsGrid.GridColor = Color.FromArgb(204, 204, 204);
             reservationsGrid.Margin = new Padding(0);
             reservationsGrid.MultiSelect = false;
             reservationsGrid.Name = "reservationsGrid";
@@ -375,7 +375,7 @@ namespace BacaIn
             // 
             readyNoteLabel.AutoSize = true;
             readyNoteLabel.Font = new Font("Segoe UI", 9.5F);
-            readyNoteLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            readyNoteLabel.ForeColor = Color.FromArgb(102, 102, 102);
             readyNoteLabel.Margin = new Padding(0, 0, 0, 4);
             readyNoteLabel.Name = "readyNoteLabel";
             readyNoteLabel.TabIndex = 0;
@@ -385,7 +385,7 @@ namespace BacaIn
             // 
             cancelNoteLabel.AutoSize = true;
             cancelNoteLabel.Font = new Font("Segoe UI", 9.5F);
-            cancelNoteLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            cancelNoteLabel.ForeColor = Color.FromArgb(102, 102, 102);
             cancelNoteLabel.Margin = new Padding(0);
             cancelNoteLabel.Name = "cancelNoteLabel";
             cancelNoteLabel.TabIndex = 1;
@@ -407,13 +407,13 @@ namespace BacaIn
             // 
             // previousButton
             // 
-            previousButton.BorderColor = Color.FromArgb(120, 135, 126);
+            previousButton.BorderColor = Color.FromArgb(128, 128, 128);
             previousButton.BorderRadius = 4;
             previousButton.BorderThickness = 1;
             previousButton.FillColor = Color.White;
             previousButton.Font = new Font("Segoe UI", 9F);
-            previousButton.ForeColor = Color.FromArgb(36, 51, 46);
-            previousButton.HoverState.FillColor = Color.FromArgb(229, 239, 232);
+            previousButton.ForeColor = Color.FromArgb(26, 26, 26);
+            previousButton.HoverState.FillColor = Color.FromArgb(223, 241, 218);
             previousButton.Margin = new Padding(0, 0, 4, 0);
             previousButton.Name = "previousButton";
             previousButton.Size = new Size(72, 28);
@@ -422,12 +422,12 @@ namespace BacaIn
             // 
             // pageNumberButton
             // 
-            pageNumberButton.BorderColor = Color.FromArgb(47, 93, 80);
+            pageNumberButton.BorderColor = Color.FromArgb(57, 112, 41);
             pageNumberButton.BorderRadius = 4;
             pageNumberButton.BorderThickness = 1;
-            pageNumberButton.FillColor = Color.FromArgb(229, 239, 232);
+            pageNumberButton.FillColor = Color.FromArgb(223, 241, 218);
             pageNumberButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            pageNumberButton.ForeColor = Color.FromArgb(47, 93, 80);
+            pageNumberButton.ForeColor = Color.FromArgb(57, 112, 41);
             pageNumberButton.Margin = new Padding(0, 0, 4, 0);
             pageNumberButton.Name = "pageNumberButton";
             pageNumberButton.Size = new Size(32, 28);
@@ -436,13 +436,13 @@ namespace BacaIn
             // 
             // nextButton
             // 
-            nextButton.BorderColor = Color.FromArgb(120, 135, 126);
+            nextButton.BorderColor = Color.FromArgb(128, 128, 128);
             nextButton.BorderRadius = 4;
             nextButton.BorderThickness = 1;
             nextButton.FillColor = Color.White;
             nextButton.Font = new Font("Segoe UI", 9F);
-            nextButton.ForeColor = Color.FromArgb(36, 51, 46);
-            nextButton.HoverState.FillColor = Color.FromArgb(229, 239, 232);
+            nextButton.ForeColor = Color.FromArgb(26, 26, 26);
+            nextButton.HoverState.FillColor = Color.FromArgb(223, 241, 218);
             nextButton.Margin = new Padding(0);
             nextButton.Name = "nextButton";
             nextButton.Size = new Size(60, 28);
@@ -454,7 +454,7 @@ namespace BacaIn
             previewLabel.AutoSize = true;
             previewLabel.Dock = DockStyle.Fill;
             previewLabel.Font = new Font("Segoe UI", 10F);
-            previewLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            previewLabel.ForeColor = Color.FromArgb(102, 102, 102);
             previewLabel.Margin = new Padding(0, 12, 0, 0);
             previewLabel.Name = "previewLabel";
             previewLabel.TabIndex = 4;
@@ -466,7 +466,7 @@ namespace BacaIn
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackColor = Color.FromArgb(247, 248, 244);
+            BackColor = Color.FromArgb(242, 242, 242);
             Controls.Add(pageLayout);
             Font = new Font("Segoe UI", 9F);
             Margin = new Padding(0);

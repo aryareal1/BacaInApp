@@ -95,14 +95,14 @@ namespace BacaIn
             studentContextLabel.AutoSize = true;
             studentContextLabel.Dock = DockStyle.Fill;
             studentContextLabel.Font = new Font("Segoe UI", 11F);
-            studentContextLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            studentContextLabel.ForeColor = Color.FromArgb(102, 102, 102);
             studentContextLabel.Margin = new Padding(0, 0, 0, 16);
             studentContextLabel.Name = "studentContextLabel";
             studentContextLabel.Text = "Student: No student selected";
             //
             // studentsPanel
             //
-            studentsPanel.BorderColor = Color.FromArgb(216, 223, 216);
+            studentsPanel.BorderColor = Color.FromArgb(204, 204, 204);
             studentsPanel.BorderRadius = 8;
             studentsPanel.BorderThickness = 1;
             studentsPanel.Controls.Add(studentsLayout);
@@ -171,13 +171,13 @@ namespace BacaIn
             // studentSearchTextBox
             //
             studentSearchTextBox.AccessibleName = "Search students by username or display name";
-            studentSearchTextBox.BorderColor = Color.FromArgb(120, 135, 126);
+            studentSearchTextBox.BorderColor = Color.FromArgb(128, 128, 128);
             studentSearchTextBox.BorderRadius = 6;
             studentSearchTextBox.Dock = DockStyle.Fill;
-            studentSearchTextBox.FocusedState.BorderColor = Color.FromArgb(47, 93, 80);
+            studentSearchTextBox.FocusedState.BorderColor = Color.FromArgb(57, 112, 41);
             studentSearchTextBox.Font = new Font("Segoe UI", 10F);
-            studentSearchTextBox.ForeColor = Color.FromArgb(36, 51, 46);
-            studentSearchTextBox.HoverState.BorderColor = Color.FromArgb(47, 93, 80);
+            studentSearchTextBox.ForeColor = Color.FromArgb(26, 26, 26);
+            studentSearchTextBox.HoverState.BorderColor = Color.FromArgb(57, 112, 41);
             studentSearchTextBox.Margin = new Padding(0);
             studentSearchTextBox.MinimumSize = new Size(0, 36);
             studentSearchTextBox.Name = "studentSearchTextBox";
@@ -192,30 +192,30 @@ namespace BacaIn
             studentsGrid.AllowUserToAddRows = false;
             studentsGrid.AllowUserToDeleteRows = false;
             studentsGrid.AllowUserToResizeRows = false;
-            studentsGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(247, 248, 244);
+            studentsGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(242, 242, 242);
             studentsGrid.AutoGenerateColumns = false;
             studentsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             studentsGrid.BackgroundColor = Color.White;
             studentsGrid.BorderStyle = BorderStyle.None;
             studentsGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             studentsGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            studentsGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(229, 239, 232);
+            studentsGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(223, 241, 218);
             studentsGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            studentsGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            studentsGrid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            studentsGrid.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            studentsGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            studentsGrid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            studentsGrid.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             studentsGrid.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
             studentsGrid.ColumnHeadersHeight = 36;
             studentsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             studentsGrid.Columns.AddRange(new DataGridViewColumn[] { usernameColumn, displayNameColumn, selectColumn });
             studentsGrid.DefaultCellStyle.BackColor = Color.White;
             studentsGrid.DefaultCellStyle.Font = new Font("Segoe UI", 10F);
-            studentsGrid.DefaultCellStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            studentsGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            studentsGrid.DefaultCellStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            studentsGrid.DefaultCellStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            studentsGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            studentsGrid.DefaultCellStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             studentsGrid.Dock = DockStyle.Fill;
             studentsGrid.EnableHeadersVisualStyles = false;
-            studentsGrid.GridColor = Color.FromArgb(216, 223, 216);
+            studentsGrid.GridColor = Color.FromArgb(204, 204, 204);
             studentsGrid.Margin = new Padding(0);
             studentsGrid.MultiSelect = false;
             studentsGrid.Name = "studentsGrid";
@@ -250,14 +250,14 @@ namespace BacaIn
             studentsPreviewLabel.AutoSize = true;
             studentsPreviewLabel.Dock = DockStyle.Fill;
             studentsPreviewLabel.Font = new Font("Segoe UI", 10F);
-            studentsPreviewLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            studentsPreviewLabel.ForeColor = Color.FromArgb(102, 102, 102);
             studentsPreviewLabel.Margin = new Padding(0, 8, 0, 0);
             studentsPreviewLabel.Name = "studentsPreviewLabel";
             studentsPreviewLabel.Text = "Design preview — students and selection not connected.";
             //
             // loansPanel
             //
-            loansPanel.BorderColor = Color.FromArgb(216, 223, 216);
+            loansPanel.BorderColor = Color.FromArgb(204, 204, 204);
             loansPanel.BorderRadius = 8;
             loansPanel.BorderThickness = 1;
             loansPanel.Controls.Add(loansLayout);
@@ -344,13 +344,13 @@ namespace BacaIn
             // loanSearchTextBox
             //
             loanSearchTextBox.AccessibleName = "Search loans by book or exemplar";
-            loanSearchTextBox.BorderColor = Color.FromArgb(120, 135, 126);
+            loanSearchTextBox.BorderColor = Color.FromArgb(128, 128, 128);
             loanSearchTextBox.BorderRadius = 6;
             loanSearchTextBox.Dock = DockStyle.Fill;
-            loanSearchTextBox.FocusedState.BorderColor = Color.FromArgb(47, 93, 80);
+            loanSearchTextBox.FocusedState.BorderColor = Color.FromArgb(57, 112, 41);
             loanSearchTextBox.Font = new Font("Segoe UI", 10F);
-            loanSearchTextBox.ForeColor = Color.FromArgb(36, 51, 46);
-            loanSearchTextBox.HoverState.BorderColor = Color.FromArgb(47, 93, 80);
+            loanSearchTextBox.ForeColor = Color.FromArgb(26, 26, 26);
+            loanSearchTextBox.HoverState.BorderColor = Color.FromArgb(57, 112, 41);
             loanSearchTextBox.Margin = new Padding(0);
             loanSearchTextBox.MinimumSize = new Size(0, 40);
             loanSearchTextBox.Name = "loanSearchTextBox";
@@ -364,18 +364,17 @@ namespace BacaIn
             createLoanButton.AccessibleDescription = "Design preview action. Creating loans is not connected.";
             createLoanButton.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             createLoanButton.AutoSize = false;
-            createLoanButton.BorderColor = Color.FromArgb(47, 93, 80);
+            createLoanButton.BorderColor = Color.FromArgb(57, 112, 41);
             createLoanButton.BorderRadius = 6;
             createLoanButton.BorderThickness = 1;
-            createLoanButton.FillColor = Color.FromArgb(47, 93, 80);
-            createLoanButton.FocusedColor = Color.FromArgb(36, 72, 62);
+            createLoanButton.FillColor = Color.FromArgb(57, 112, 41);
+            createLoanButton.FocusedColor = Color.FromArgb(38, 74, 28);
             createLoanButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             createLoanButton.ForeColor = Color.White;
-            createLoanButton.HoverState.FillColor = Color.FromArgb(36, 72, 62);
-            createLoanButton.Margin = new Padding(0);
+            createLoanButton.HoverState.FillColor = Color.FromArgb(38, 74, 28);
             createLoanButton.MinimumSize = new Size(144, 40);
             createLoanButton.Name = "createLoanButton";
-            createLoanButton.PressedColor = Color.FromArgb(36, 72, 62);
+            createLoanButton.PressedColor = Color.FromArgb(38, 74, 28);
             createLoanButton.Size = new Size(144, 40);
             createLoanButton.TabIndex = 1;
             createLoanButton.Text = "Create Loan";
@@ -387,30 +386,30 @@ namespace BacaIn
             loansGrid.AllowUserToAddRows = false;
             loansGrid.AllowUserToDeleteRows = false;
             loansGrid.AllowUserToResizeRows = false;
-            loansGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(247, 248, 244);
+            loansGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(242, 242, 242);
             loansGrid.AutoGenerateColumns = false;
             loansGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             loansGrid.BackgroundColor = Color.White;
             loansGrid.BorderStyle = BorderStyle.None;
             loansGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             loansGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            loansGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(229, 239, 232);
+            loansGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(223, 241, 218);
             loansGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            loansGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            loansGrid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            loansGrid.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            loansGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            loansGrid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            loansGrid.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             loansGrid.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
             loansGrid.ColumnHeadersHeight = 36;
             loansGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             loansGrid.Columns.AddRange(new DataGridViewColumn[] { titleColumn, authorColumn, exemplarColumn, statusColumn, returnColumn });
             loansGrid.DefaultCellStyle.BackColor = Color.White;
             loansGrid.DefaultCellStyle.Font = new Font("Segoe UI", 10F);
-            loansGrid.DefaultCellStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            loansGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            loansGrid.DefaultCellStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            loansGrid.DefaultCellStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            loansGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            loansGrid.DefaultCellStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             loansGrid.Dock = DockStyle.Fill;
             loansGrid.EnableHeadersVisualStyles = false;
-            loansGrid.GridColor = Color.FromArgb(216, 223, 216);
+            loansGrid.GridColor = Color.FromArgb(204, 204, 204);
             loansGrid.Margin = new Padding(0);
             loansGrid.MultiSelect = false;
             loansGrid.Name = "loansGrid";
@@ -454,7 +453,7 @@ namespace BacaIn
             loansPreviewLabel.AutoSize = true;
             loansPreviewLabel.Dock = DockStyle.Fill;
             loansPreviewLabel.Font = new Font("Segoe UI", 10F);
-            loansPreviewLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            loansPreviewLabel.ForeColor = Color.FromArgb(102, 102, 102);
             loansPreviewLabel.Margin = new Padding(0, 8, 0, 0);
             loansPreviewLabel.Name = "loansPreviewLabel";
             loansPreviewLabel.Text = "Design preview — loans, search and actions not connected.";
@@ -465,10 +464,10 @@ namespace BacaIn
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackColor = Color.FromArgb(247, 248, 244);
+            BackColor = Color.FromArgb(242, 242, 242);
             Controls.Add(pageLayout);
             Font = new Font("Segoe UI", 9F);
-            ForeColor = Color.FromArgb(36, 51, 46);
+            ForeColor = Color.FromArgb(26, 26, 26);
             Name = "LoansReturnsPage";
             Size = new Size(1000, 700);
             pageLayout.ResumeLayout(false);

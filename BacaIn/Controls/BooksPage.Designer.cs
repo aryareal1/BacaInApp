@@ -76,7 +76,7 @@ namespace BacaIn
             headingLabel.AutoSize = true;
             headingLabel.Dock = DockStyle.Fill;
             headingLabel.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            headingLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            headingLabel.ForeColor = Color.FromArgb(26, 26, 26);
             headingLabel.Margin = new Padding(0, 0, 0, 8);
             headingLabel.Name = "headingLabel";
             headingLabel.TabIndex = 0;
@@ -87,7 +87,7 @@ namespace BacaIn
             supportingLabel.AutoSize = true;
             supportingLabel.Dock = DockStyle.Fill;
             supportingLabel.Font = new Font("Segoe UI", 10.5F);
-            supportingLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            supportingLabel.ForeColor = Color.FromArgb(102, 102, 102);
             supportingLabel.Margin = new Padding(0, 0, 0, 24);
             supportingLabel.Name = "supportingLabel";
             supportingLabel.TabIndex = 1;
@@ -130,7 +130,7 @@ namespace BacaIn
             searchLabel.AutoSize = true;
             searchLabel.Dock = DockStyle.Fill;
             searchLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            searchLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            searchLabel.ForeColor = Color.FromArgb(26, 26, 26);
             searchLabel.Margin = new Padding(0, 0, 0, 8);
             searchLabel.Name = "searchLabel";
             searchLabel.TabIndex = 0;
@@ -140,20 +140,20 @@ namespace BacaIn
             //
             searchTextBox.AccessibleDescription = "Design preview. Catalog search is not connected.";
             searchTextBox.AccessibleName = "Search books";
-            searchTextBox.BorderColor = Color.FromArgb(120, 135, 126);
+            searchTextBox.BorderColor = Color.FromArgb(128, 128, 128);
             searchTextBox.BorderRadius = 4;
             searchTextBox.Cursor = Cursors.IBeam;
             searchTextBox.DefaultText = "";
             searchTextBox.Dock = DockStyle.Fill;
             searchTextBox.FillColor = Color.White;
-            searchTextBox.FocusedState.BorderColor = Color.FromArgb(47, 93, 80);
+            searchTextBox.FocusedState.BorderColor = Color.FromArgb(57, 112, 41);
             searchTextBox.Font = new Font("Segoe UI", 10.5F);
-            searchTextBox.ForeColor = Color.FromArgb(36, 51, 46);
-            searchTextBox.HoverState.BorderColor = Color.FromArgb(47, 93, 80);
+            searchTextBox.ForeColor = Color.FromArgb(26, 26, 26);
+            searchTextBox.HoverState.BorderColor = Color.FromArgb(57, 112, 41);
             searchTextBox.Margin = new Padding(0);
             searchTextBox.MinimumSize = new Size(0, 44);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.PlaceholderForeColor = Color.FromArgb(95, 111, 103);
+            searchTextBox.PlaceholderForeColor = Color.FromArgb(102, 102, 102);
             searchTextBox.PlaceholderText = "Title, author, publisher, or ISBN";
             searchTextBox.Size = new Size(760, 44);
             searchTextBox.TabIndex = 1;
@@ -163,16 +163,16 @@ namespace BacaIn
             addBookButton.AccessibleDescription = "Design preview. Add Book is not connected.";
             addBookButton.AccessibleName = "Add Book";
             addBookButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            addBookButton.BorderColor = Color.FromArgb(47, 93, 80);
+            addBookButton.BorderColor = Color.FromArgb(57, 112, 41);
             addBookButton.BorderRadius = 4;
             addBookButton.BorderThickness = 1;
-            addBookButton.DisabledState.FillColor = Color.FromArgb(216, 223, 216);
-            addBookButton.DisabledState.ForeColor = Color.FromArgb(95, 111, 103);
-            addBookButton.FillColor = Color.FromArgb(47, 93, 80);
-            addBookButton.FocusedColor = Color.FromArgb(36, 72, 62);
+            addBookButton.DisabledState.FillColor = Color.FromArgb(204, 204, 204);
+            addBookButton.DisabledState.ForeColor = Color.FromArgb(102, 102, 102);
+            addBookButton.FillColor = Color.FromArgb(57, 112, 41);
+            addBookButton.FocusedColor = Color.FromArgb(38, 74, 28);
             addBookButton.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             addBookButton.ForeColor = Color.White;
-            addBookButton.HoverState.FillColor = Color.FromArgb(36, 72, 62);
+            addBookButton.HoverState.FillColor = Color.FromArgb(38, 74, 28);
             addBookButton.Margin = new Padding(0);
             addBookButton.Name = "addBookButton";
             addBookButton.PressedColor = Color.Black;
@@ -182,7 +182,7 @@ namespace BacaIn
             //
             // catalogPanel
             //
-            catalogPanel.BorderColor = Color.FromArgb(216, 223, 216);
+            catalogPanel.BorderColor = Color.FromArgb(204, 204, 204);
             catalogPanel.BorderRadius = 6;
             catalogPanel.BorderThickness = 1;
             catalogPanel.Controls.Add(catalogLayout);
@@ -215,7 +215,7 @@ namespace BacaIn
             catalogLabel.AutoSize = true;
             catalogLabel.Dock = DockStyle.Fill;
             catalogLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            catalogLabel.ForeColor = Color.FromArgb(36, 51, 46);
+            catalogLabel.ForeColor = Color.FromArgb(26, 26, 26);
             catalogLabel.Margin = new Padding(0, 0, 0, 16);
             catalogLabel.Name = "catalogLabel";
             catalogLabel.TabIndex = 0;
@@ -235,11 +235,11 @@ namespace BacaIn
             booksGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             booksGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             headerStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            headerStyle.BackColor = Color.FromArgb(229, 239, 232);
+            headerStyle.BackColor = Color.FromArgb(223, 241, 218);
             headerStyle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            headerStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            headerStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            headerStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            headerStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            headerStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            headerStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             headerStyle.WrapMode = DataGridViewTriState.True;
             booksGrid.ColumnHeadersDefaultCellStyle = headerStyle;
             booksGrid.ColumnHeadersHeight = 44;
@@ -248,18 +248,18 @@ namespace BacaIn
             booksGrid.Columns.AddRange(new DataGridViewColumn[] { titleColumn, authorColumn, publisherColumn, isbnColumn, modifyColumn, deleteColumn });
             cellStyle.BackColor = Color.White;
             cellStyle.Font = new Font("Segoe UI", 10.5F);
-            cellStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            cellStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            cellStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            cellStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            cellStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            cellStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             booksGrid.DefaultCellStyle = cellStyle;
             alternateStyle.BackColor = Color.White;
-            alternateStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            alternateStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            alternateStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            alternateStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            alternateStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            alternateStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             booksGrid.AlternatingRowsDefaultCellStyle = alternateStyle;
             booksGrid.Dock = DockStyle.Fill;
             booksGrid.EnableHeadersVisualStyles = false;
-            booksGrid.GridColor = Color.FromArgb(216, 223, 216);
+            booksGrid.GridColor = Color.FromArgb(204, 204, 204);
             booksGrid.Margin = new Padding(0);
             booksGrid.MultiSelect = false;
             booksGrid.Name = "booksGrid";
@@ -269,20 +269,20 @@ namespace BacaIn
             booksGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             booksGrid.TabIndex = 1;
             booksGrid.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            booksGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(36, 51, 46);
-            booksGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            booksGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
-            booksGrid.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(229, 239, 232);
-            booksGrid.ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(36, 51, 46);
+            booksGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(26, 26, 26);
+            booksGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            booksGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
+            booksGrid.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(223, 241, 218);
+            booksGrid.ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(26, 26, 26);
             booksGrid.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             booksGrid.ThemeStyle.HeaderStyle.Height = 44;
             booksGrid.ThemeStyle.RowsStyle.BackColor = Color.White;
-            booksGrid.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(36, 51, 46);
+            booksGrid.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(26, 26, 26);
             booksGrid.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 10.5F);
-            booksGrid.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(229, 239, 232);
-            booksGrid.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(36, 51, 46);
+            booksGrid.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(223, 241, 218);
+            booksGrid.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(26, 26, 26);
             booksGrid.ThemeStyle.RowsStyle.Height = 40;
-            booksGrid.ThemeStyle.GridColor = Color.FromArgb(216, 223, 216);
+            booksGrid.ThemeStyle.GridColor = Color.FromArgb(204, 204, 204);
             //
             // columns
             //
@@ -331,7 +331,7 @@ namespace BacaIn
             previewLabel.AutoSize = true;
             previewLabel.Dock = DockStyle.Fill;
             previewLabel.Font = new Font("Segoe UI", 10F);
-            previewLabel.ForeColor = Color.FromArgb(95, 111, 103);
+            previewLabel.ForeColor = Color.FromArgb(102, 102, 102);
             previewLabel.Margin = new Padding(0, 16, 0, 0);
             previewLabel.Name = "previewLabel";
             previewLabel.TabIndex = 2;
@@ -343,7 +343,7 @@ namespace BacaIn
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackColor = Color.FromArgb(247, 248, 244);
+            BackColor = Color.FromArgb(242, 242, 242);
             Controls.Add(pageLayout);
             Font = new Font("Segoe UI", 9F);
             Margin = new Padding(0);
