@@ -75,6 +75,28 @@ Display **Damaged** as a condition label. It is not automatically an application
 - Keep keyboard focus visible with a primary-colored outline or equivalent native focus indicator.
 - Preserve entered values when validation fails.
 
+### Administration
+
+- `AdminForm` uses a white sidebar and a `Guna2Panel` content host. Books, Loans & Returns, Students, and Reports are separate designer-editable `UserControl` pages under `BacaIn/Controls`.
+- Sidebar navigation switches existing page instances, preserves entered UI values, and identifies the selected destination with a pale-green surface and a leading green indicator. Books is the initial page; logout remains separate and unwired.
+- Books and Students provide labeled search inputs, primary add actions, and empty management tables. Loans & Returns provides a student-selection area, loan search, Create Loan, and an empty loans table with Return actions.
+- Reports provides report-type and date selectors, Apply and Print / Save PDF actions, summary cards, and an empty Loans & Returns preview. Em dashes mean values are not connected, not zero totals.
+- Admin pages are design-only: search, CRUD, student selection, lending/returns, report generation, printing, and logout have no business handlers. Preview hints make this explicit; no fictional records are loaded.
+- Application startup remains `LoginForm`; authentication and routing from login to administration are intentionally unchanged.
+
+### Student Portal
+
+- `StudentForm` matches the `AdminForm` structure with a white sidebar, role label `STUDENT PORTAL`, and a `Guna2Panel` content host.
+- Student navigation includes 4 primary sidebar destinations: **Catalog**, **My Loans**, **My Reservations**, and **Check-in History**. Catalog is the initial selected page; logout remains separate and unwired.
+- **Book Detail** (`BookDetailPage`) is accessed through the catalog's **View Detail** action and returns via **← Back to Catalog**, keeping Catalog active in the sidebar.
+- Student pages are designer-editable `UserControl`s under `BacaIn/Controls`: `CatalogPage`, `BookDetailPage`, `MyLoansPage`, `MyReservationsPage`, and `CheckInHistoryPage`.
+- **Catalog** provides keyword search, availability filter, book list table (Title, Author, Available, View Detail action), and pagination.
+- **Book Detail** shows book cover placeholder, metadata (title, author, publisher, year, ISBN, description), available copies count, Reserve Book primary action, and library copies table (Barcode, Condition, Status).
+- **My Loans** provides status filtering (All, Active, Overdue, Returned), summary counts, loans table (Book / Copy, Borrowed, Due, Returned, Status), and return policy guidance.
+- **My Reservations** provides status filtering, pending/ready summary counts, reservations table (Book title, Reserved, Status, Queue, Cancel action), and pickup guidance.
+- **Check-in History** provides date-range filtering (From, To, Apply, Reset), attendance count summary, visits table (Date, Check-in Time), and local-time guidance.
+- Pages follow design preview conventions: schema-aligned controls, empty tables, and explicit preview labels.
+
 ### Login
 
 - Use an off-white page and a white form panel.

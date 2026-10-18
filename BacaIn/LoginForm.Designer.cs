@@ -344,7 +344,7 @@
             MinimumSize = new Size(430, 730);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
+            Text = "BacaIn App";
             pageLayout.ResumeLayout(false);
             pageLayout.PerformLayout();
             loginPanel.ResumeLayout(false);
