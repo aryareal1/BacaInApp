@@ -76,16 +76,19 @@ namespace BacaIn
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == actionColumn.Index)
             {
-                SelectedBookId = (Guid)catalogGrid.Rows[e.RowIndex].Tag!;
-                RaiseViewDetailRequested();
+                if (catalogGrid.Rows[e.RowIndex].Tag is Guid id)
+                {
+                    SelectedBookId = id;
+                    RaiseViewDetailRequested();
+                }
             }
         }
 
         private void previewDetailButton_Click(object sender, EventArgs e)
         {
-            if (catalogGrid.SelectedRows.Count > 0)
+            if (catalogGrid.SelectedRows.Count > 0 && catalogGrid.SelectedRows[0].Tag is Guid id)
             {
-                SelectedBookId = (Guid)catalogGrid.SelectedRows[0].Tag!;
+                SelectedBookId = id;
             }
             else if (_books.Count > 0)
             {

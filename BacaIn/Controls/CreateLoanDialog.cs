@@ -72,7 +72,7 @@ namespace BacaIn.Controls
                 return;
             }
 
-            var exemplarId = (Guid)exemplarsGrid.SelectedRows[0].Tag!;
+            if (exemplarsGrid.SelectedRows[0].Tag is not Guid exemplarId) return;
             var selectedCopy = _availableCopies.Find(x => x.Id == exemplarId);
 
             issueButton.Enabled = false;

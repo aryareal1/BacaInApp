@@ -14,7 +14,7 @@ namespace BacaIn
         private List<User> _students = new List<User>();
         private User? _selectedStudent;
         private List<Loan> _loans = new List<Loan>();
-
+        private bool _isLoadingStudents = false;
         public LoansReturnsPage()
         {
             InitializeComponent();
@@ -36,6 +36,7 @@ namespace BacaIn
         {
             try
             {
+                _isLoadingStudents = true;
                 _students = await LoanService.Instance.GetActiveStudentsAsync(keyword);
                 studentsGrid.Rows.Clear();
 
@@ -44,15 +45,19 @@ namespace BacaIn
                     var idx = studentsGrid.Rows.Add(s.Username, s.DisplayName ?? "—", "Select");
                     studentsGrid.Rows[idx].Tag = s;
                 }
-
-                if (_students.Count > 0 && _selectedStudent == null)
-                {
-                    await SetSelectedStudentAsync(_students[0]);
-                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Failed to load students: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                _isLoadingStudents = false;
+            }
+
+            if (_students.Count > 0 && _selectedStudent == null)
+            {
+                await SetSelectedStudentAsync(_students[0]);
             }
         }
 
@@ -69,14 +74,15 @@ namespace BacaIn
         private async Task HandleStudentSelectClickAsync(DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || e.RowIndex >= studentsGrid.Rows.Count) return;
-            var student = (User)studentsGrid.Rows[e.RowIndex].Tag!;
+            if (studentsGrid.Rows[e.RowIndex].Tag is not User student) return;
             await SetSelectedStudentAsync(student);
         }
 
         private async Task HandleStudentSelectionChangedAsync()
         {
+            if (_isLoadingStudents) return;
             if (studentsGrid.SelectedRows.Count == 0) return;
-            var student = (User)studentsGrid.SelectedRows[0].Tag!;
+            if (studentsGrid.SelectedRows[0].Tag is not User student) return;
             if (_selectedStudent?.Id != student.Id)
             {
                 await SetSelectedStudentAsync(student);
@@ -189,8 +195,7 @@ namespace BacaIn
         {
             if (e.RowIndex < 0 || e.RowIndex >= loansGrid.Rows.Count) return;
             if (e.ColumnIndex != returnColumn.Index) return;
-
-            var loan = (Loan)loansGrid.Rows[e.RowIndex].Tag!;
+            if (loansGrid.Rows[e.RowIndex].Tag is not Loan loan) return;
             if (loan.Status == "RETURNED") return;
 
             string confirmMsg;

@@ -224,6 +224,28 @@ namespace BacaIn
                 }
                 return;
             }
+            if (args.Length > 0 && args[0] == "--test-admin-form")
+            {
+                ApplicationConfiguration.Initialize();
+                Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();
+                var auth = Services.AuthService.Instance;
+                var admin = auth.LoginAsync("admin", "admin123").GetAwaiter().GetResult();
+                var adminForm = new AdminForm();
+                var handle = adminForm.Handle;
+                Console.WriteLine("ADMIN_FORM_LOAD_SUCCESS");
+                return;
+            }
+            if (args.Length > 0 && args[0] == "--test-student-form")
+            {
+                ApplicationConfiguration.Initialize();
+                Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();
+                var auth = Services.AuthService.Instance;
+                var student = auth.LoginAsync("aji", "aji123").GetAwaiter().GetResult();
+                var studentForm = new StudentForm();
+                var handle = studentForm.Handle;
+                Console.WriteLine("STUDENT_FORM_LOAD_SUCCESS");
+                return;
+            }
             if (args.Length > 0 && args[0] == "--test-all")
             {
                 Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();

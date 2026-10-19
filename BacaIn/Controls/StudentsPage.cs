@@ -61,8 +61,7 @@ namespace BacaIn
         private async Task HandleGridCellClickAsync(DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || e.RowIndex >= studentsGrid.Rows.Count) return;
-            var student = (User)studentsGrid.Rows[e.RowIndex].Tag!;
-
+            if (studentsGrid.Rows[e.RowIndex].Tag is not User student) return;
             if (e.ColumnIndex == editColumn.Index)
             {
                 using var dialog = new StudentEditDialog(student);

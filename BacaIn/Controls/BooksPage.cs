@@ -63,8 +63,7 @@ namespace BacaIn
         private async Task HandleGridCellClickAsync(DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || e.RowIndex >= booksGrid.Rows.Count) return;
-
-            var bookId = (Guid)booksGrid.Rows[e.RowIndex].Tag!;
+            if (booksGrid.Rows[e.RowIndex].Tag is not Guid bookId) return;
             var book = _books.Find(x => x.Id == bookId);
 
             if (e.ColumnIndex == modifyColumn.Index)

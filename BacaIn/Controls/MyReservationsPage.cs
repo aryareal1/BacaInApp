@@ -80,8 +80,7 @@ namespace BacaIn
         {
             if (e.RowIndex < 0 || e.RowIndex >= reservationsGrid.Rows.Count) return;
             if (e.ColumnIndex != actionColumn.Index) return;
-
-            var reservation = (Reservation)reservationsGrid.Rows[e.RowIndex].Tag!;
+            if (reservationsGrid.Rows[e.RowIndex].Tag is not Reservation reservation) return;
             if (reservation.Status != "PENDING" && reservation.Status != "READY") return;
 
             var confirm = MessageBox.Show(this,
