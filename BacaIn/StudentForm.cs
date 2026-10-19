@@ -14,8 +14,19 @@ namespace BacaIn
         public StudentForm()
         {
             InitializeComponent();
+            previewLabel.Visible = false;
+            logoutButton.Click += LogoutButton_Click;
         }
 
+        private void LogoutButton_Click(object? sender, EventArgs e)
+        {
+            var confirm = MessageBox.Show(this, "Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirm == DialogResult.Yes)
+            {
+                Services.CurrentUser.Logout();
+                Close();
+            }
+        }
         private void catalogButton_Click(object sender, EventArgs e)
         {
             catalogButton.Checked = true;
