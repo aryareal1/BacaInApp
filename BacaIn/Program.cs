@@ -180,6 +180,24 @@ namespace BacaIn
                 }
                 return;
             }
+            if (args.Length > 0 && args[0] == "--test-student-portal")
+            {
+                Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();
+                var studentId = Guid.Parse("22222222-2222-2222-2222-222222222222"); // aji
+                var catalog = Services.BookService.Instance.SearchBibliographiesAsync(null, availableOnly: false).GetAwaiter().GetResult();
+                var myLoans = Services.LoanService.Instance.GetLoansForStudentAsync(studentId).GetAwaiter().GetResult();
+                var history = Services.CheckInService.Instance.GetHistoryAsync(studentId, DateTime.UtcNow.AddDays(-30), DateTime.UtcNow).GetAwaiter().GetResult();
+
+                if (catalog.Count >= 3 && myLoans.Count >= 1 && history.Count >= 1)
+                {
+                    Console.WriteLine("STUDENT_PORTAL_TEST_PASS");
+                }
+                else
+                {
+                    Console.WriteLine("STUDENT_PORTAL_TEST_FAIL");
+                }
+                return;
+            }
             if (args.Length > 0 && (args[0] == "--kiosk" || args[0] == "--checkin"))
             {
                 ApplicationConfiguration.Initialize();

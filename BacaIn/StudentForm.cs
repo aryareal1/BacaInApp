@@ -1,16 +1,14 @@
 using System;
 using System.Windows.Forms;
+using BacaIn.Services;
 
 namespace BacaIn
 {
     /// <summary>
-    /// Hosts design-preview student portal pages and their navigation.
+    /// Hosts student portal pages and their navigation.
     /// </summary>
     public partial class StudentForm : Form
     {
-        /// <summary>
-        /// Creates the student portal shell with the Catalog page selected.
-        /// </summary>
         public StudentForm()
         {
             InitializeComponent();
@@ -23,37 +21,46 @@ namespace BacaIn
             var confirm = MessageBox.Show(this, "Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (confirm == DialogResult.Yes)
             {
-                Services.CurrentUser.Logout();
+                CurrentUser.Logout();
                 Close();
             }
         }
-        private void catalogButton_Click(object sender, EventArgs e)
+
+        private async void catalogButton_Click(object sender, EventArgs e)
         {
             catalogButton.Checked = true;
+            await catalogPage.LoadCatalogAsync();
             catalogPage.BringToFront();
         }
 
-        private void loansButton_Click(object sender, EventArgs e)
+        private async void loansButton_Click(object sender, EventArgs e)
         {
             loansButton.Checked = true;
+            await myLoansPage.LoadLoansAsync();
             myLoansPage.BringToFront();
         }
 
-        private void reservationsButton_Click(object sender, EventArgs e)
+        private async void reservationsButton_Click(object sender, EventArgs e)
         {
             reservationsButton.Checked = true;
+            await myReservationsPage.LoadReservationsAsync();
             myReservationsPage.BringToFront();
         }
 
-        private void historyButton_Click(object sender, EventArgs e)
+        private async void historyButton_Click(object sender, EventArgs e)
         {
             historyButton.Checked = true;
+            await checkInHistoryPage.LoadHistoryAsync();
             checkInHistoryPage.BringToFront();
         }
 
-        private void catalogPage_ViewDetailRequested(object sender, EventArgs e)
+        private async void catalogPage_ViewDetailRequested(object sender, EventArgs e)
         {
             catalogButton.Checked = true;
+            if (catalogPage.SelectedBookId.HasValue)
+            {
+                await bookDetailPage.LoadBookAsync(catalogPage.SelectedBookId.Value);
+            }
             bookDetailPage.BringToFront();
         }
 
