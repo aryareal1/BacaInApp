@@ -96,13 +96,8 @@ namespace BacaIn
 
         private void OpenCheckinKiosk()
         {
-            // Placeholder: CheckinForm will be opened here once created in Task 3
-            var checkinType = Type.GetType("BacaIn.CheckinForm, BacaIn");
-            if (checkinType != null)
-            {
-                var form = (Form)Activator.CreateInstance(checkinType)!;
-                form.Show();
-            }
+            var form = new CheckinForm();
+            form.Show();
         }
     }
 }
