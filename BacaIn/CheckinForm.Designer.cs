@@ -29,7 +29,6 @@ namespace BacaIn
             feedbackPanel = new Guna.UI2.WinForms.Guna2Panel();
             feedbackLabel = new Label();
             footerLabel = new Label();
-            closeButton = new Guna.UI2.WinForms.Guna2Button();
             resetTimer = new System.Windows.Forms.Timer(components);
             pageLayout.SuspendLayout();
             kioskPanel.SuspendLayout();
@@ -87,11 +86,10 @@ namespace BacaIn
             formLayout.Controls.Add(checkinButton, 0, 4);
             formLayout.Controls.Add(feedbackPanel, 0, 5);
             formLayout.Controls.Add(footerLabel, 0, 6);
-            formLayout.Controls.Add(closeButton, 0, 7);
             formLayout.Dock = DockStyle.Fill;
             formLayout.Location = new Point(32, 32);
             formLayout.Name = "formLayout";
-            formLayout.RowCount = 8;
+            formLayout.RowCount = 7;
             formLayout.RowStyles.Add(new RowStyle());
             formLayout.RowStyles.Add(new RowStyle());
             formLayout.RowStyles.Add(new RowStyle());
@@ -99,8 +97,7 @@ namespace BacaIn
             formLayout.RowStyles.Add(new RowStyle());
             formLayout.RowStyles.Add(new RowStyle());
             formLayout.RowStyles.Add(new RowStyle());
-            formLayout.RowStyles.Add(new RowStyle());
-            formLayout.Size = new Size(416, 436);
+            formLayout.Size = new Size(416, 400);
             formLayout.TabIndex = 0;
             // 
             // titleLabel
@@ -221,31 +218,12 @@ namespace BacaIn
             footerLabel.Font = new Font("Segoe UI", 9.5F);
             footerLabel.ForeColor = Color.FromArgb(102, 102, 102);
             footerLabel.Location = new Point(0, 315);
-            footerLabel.Margin = new Padding(0, 0, 0, 16);
+            footerLabel.Margin = new Padding(0);
             footerLabel.Name = "footerLabel";
             footerLabel.Size = new Size(416, 17);
             footerLabel.TabIndex = 6;
             footerLabel.Text = "Check-in is recorded once per day per student.";
             footerLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // closeButton
-            // 
-            closeButton.Anchor = AnchorStyles.None;
-            closeButton.BorderColor = Color.FromArgb(204, 204, 204);
-            closeButton.BorderRadius = 4;
-            closeButton.BorderThickness = 1;
-            closeButton.FillColor = Color.White;
-            closeButton.Font = new Font("Segoe UI", 9.5F);
-            closeButton.ForeColor = Color.FromArgb(102, 102, 102);
-            closeButton.HoverState.BorderColor = Color.FromArgb(128, 128, 128);
-            closeButton.HoverState.FillColor = Color.FromArgb(242, 242, 242);
-            closeButton.Location = new Point(158, 348);
-            closeButton.Margin = new Padding(0);
-            closeButton.Name = "closeButton";
-            closeButton.Size = new Size(100, 32);
-            closeButton.TabIndex = 7;
-            closeButton.Text = "Close Kiosk";
-            // 
             // resetTimer
             // 
             resetTimer.Interval = 4000;
@@ -287,7 +265,6 @@ namespace BacaIn
         private Guna.UI2.WinForms.Guna2Panel feedbackPanel;
         private Label feedbackLabel;
         private Label footerLabel;
-        private Guna.UI2.WinForms.Guna2Button closeButton;
         private System.Windows.Forms.Timer resetTimer;
     }
 }

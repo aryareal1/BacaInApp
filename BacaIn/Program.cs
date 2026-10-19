@@ -246,6 +246,30 @@ namespace BacaIn
                 Console.WriteLine("STUDENT_FORM_LOAD_SUCCESS");
                 return;
             }
+            if (args.Length > 0 && args[0] == "--test-checkin-fullscreen")
+            {
+                ApplicationConfiguration.Initialize();
+                var form = new CheckinForm();
+                var handle = form.Handle;
+                var initBorder = form.FormBorderStyle;
+                var initWindow = form.WindowState;
+
+                form.ToggleFullScreen();
+                bool isFs = form.FormBorderStyle == FormBorderStyle.None && form.WindowState == FormWindowState.Maximized;
+
+                form.ToggleFullScreen();
+                bool isRestored = form.FormBorderStyle == initBorder && form.WindowState == initWindow;
+
+                if (isFs && isRestored)
+                {
+                    Console.WriteLine("CHECKIN_FULLSCREEN_PASS");
+                }
+                else
+                {
+                    Console.WriteLine("CHECKIN_FULLSCREEN_FAIL");
+                }
+                return;
+            }
             if (args.Length > 0 && args[0] == "--test-all")
             {
                 Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();

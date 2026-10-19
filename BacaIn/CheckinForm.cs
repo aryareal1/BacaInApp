@@ -10,9 +10,46 @@ namespace BacaIn
         public CheckinForm()
         {
             InitializeComponent();
+            KeyPreview = true;
             checkinButton.Click += async (s, e) => await HandleCheckinAsync();
-            closeButton.Click += (s, e) => Close();
             resetTimer.Tick += ResetTimer_Tick;
+            KeyDown += CheckinForm_KeyDown;
+        }
+
+        private bool _isFullScreen = false;
+        private FormBorderStyle _prevBorderStyle = FormBorderStyle.Sizable;
+        private FormWindowState _prevWindowState = FormWindowState.Normal;
+
+        private void CheckinForm_KeyDown(object? sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F11)
+            {
+                e.SuppressKeyPress = true;
+                ToggleFullScreen();
+            }
+            else if (e.KeyCode == Keys.Escape && _isFullScreen)
+            {
+                e.SuppressKeyPress = true;
+                ToggleFullScreen();
+            }
+        }
+
+        public void ToggleFullScreen()
+        {
+            if (!_isFullScreen)
+            {
+                _prevBorderStyle = FormBorderStyle;
+                _prevWindowState = WindowState;
+                FormBorderStyle = FormBorderStyle.None;
+                WindowState = FormWindowState.Maximized;
+                _isFullScreen = true;
+            }
+            else
+            {
+                FormBorderStyle = _prevBorderStyle;
+                WindowState = _prevWindowState;
+                _isFullScreen = false;
+            }
         }
 
         private async Task HandleCheckinAsync()
