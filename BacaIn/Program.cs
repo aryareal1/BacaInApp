@@ -140,6 +140,46 @@ namespace BacaIn
                 }
                 return;
             }
+            if (args.Length > 0 && args[0] == "--test-reservations")
+            {
+                Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();
+                var resService = Services.ReservationService.Instance;
+                var studentId = Guid.Parse("22222222-2222-2222-2222-222222222222"); // aji
+                var book2Id = Guid.Parse("33333333-3333-3333-3333-333333333332");   // Bumi Manusia
+                var book1Id = Guid.Parse("33333333-3333-3333-3333-333333333331");   // Laskar Pelangi
+
+                // 1. Initial reservations for Aji
+                var ajiRes = resService.GetStudentReservationsAsync(studentId).GetAwaiter().GetResult();
+
+                // 2. Duplicate active reservation should throw
+                bool duplicateBlocked = false;
+                try
+                {
+                    resService.MakeReservationAsync(studentId, book2Id).GetAwaiter().GetResult();
+                }
+                catch
+                {
+                    duplicateBlocked = true;
+                }
+
+                // 3. New reservation for Book 1
+                var newRes = resService.MakeReservationAsync(studentId, book1Id).GetAwaiter().GetResult();
+
+                // 4. Cancel new reservation
+                resService.CancelReservationAsync(newRes.Id).GetAwaiter().GetResult();
+                var afterCancel = resService.GetStudentReservationsAsync(studentId).GetAwaiter().GetResult();
+                var cancelledItem = afterCancel.Find(x => x.Id == newRes.Id);
+
+                if (ajiRes.Count >= 1 && duplicateBlocked && newRes != null && cancelledItem?.Status == "CANCELLED")
+                {
+                    Console.WriteLine("RESERVATIONS_TEST_PASS");
+                }
+                else
+                {
+                    Console.WriteLine("RESERVATIONS_TEST_FAIL");
+                }
+                return;
+            }
             if (args.Length > 0 && (args[0] == "--kiosk" || args[0] == "--checkin"))
             {
                 ApplicationConfiguration.Initialize();
