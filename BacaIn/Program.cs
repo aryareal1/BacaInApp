@@ -101,6 +101,45 @@ namespace BacaIn
                 }
                 return;
             }
+            if (args.Length > 0 && args[0] == "--test-loans")
+            {
+                Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();
+                var loanService = Services.LoanService.Instance;
+                var studentId = Guid.Parse("22222222-2222-2222-2222-222222222222"); // aji
+
+                // 1. Check Aji has overdue loan
+                var hasOverdue = loanService.HasOverdueLoansAsync(studentId).GetAwaiter().GetResult();
+
+                // 2. Creating loan should throw due to overdue block
+                bool blocked = false;
+                var availCopies = loanService.GetAvailableExemplarsAsync().GetAwaiter().GetResult();
+                try
+                {
+                    loanService.CreateLoanAsync(studentId, availCopies[0].Id).GetAwaiter().GetResult();
+                }
+                catch
+                {
+                    blocked = true;
+                }
+
+                // 3. Return the overdue loan
+                var ajiLoans = loanService.GetLoansForStudentAsync(studentId).GetAwaiter().GetResult();
+                var overdueLoan = ajiLoans.Find(x => x.IsOverdue);
+                var returnResult = loanService.ReturnLoanAsync(overdueLoan!.Id).GetAwaiter().GetResult();
+
+                // 4. Now create loan succeeds
+                var newLoan = loanService.CreateLoanAsync(studentId, availCopies[0].Id).GetAwaiter().GetResult();
+
+                if (hasOverdue && blocked && returnResult.isLate && returnResult.fineAmount > 0 && newLoan != null)
+                {
+                    Console.WriteLine("LOANS_TEST_PASS");
+                }
+                else
+                {
+                    Console.WriteLine("LOANS_TEST_FAIL");
+                }
+                return;
+            }
             if (args.Length > 0 && (args[0] == "--kiosk" || args[0] == "--checkin"))
             {
                 ApplicationConfiguration.Initialize();
