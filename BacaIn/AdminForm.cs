@@ -16,6 +16,12 @@ namespace BacaIn
             InitializeComponent();
             previewLabel.Visible = false;
             logoutButton.Click += LogoutButton_Click;
+            studentsPage.ManageLoansRequested += async (s, studentId) =>
+            {
+                loansReturnsButton.Checked = true;
+                await loansReturnsPage.SelectStudentByIdAsync(studentId);
+                loansReturnsPage.BringToFront();
+            };
         }
 
         private void LogoutButton_Click(object? sender, EventArgs e)

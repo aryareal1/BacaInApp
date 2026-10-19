@@ -198,6 +198,32 @@ namespace BacaIn
                 }
                 return;
             }
+            if (args.Length > 0 && args[0] == "--test-reports")
+            {
+                Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();
+                var repService = Services.ReportService.Instance;
+                var from = DateTime.UtcNow.AddDays(-30);
+                var to = DateTime.UtcNow;
+
+                var r1 = repService.GetReportDataAsync("Loans & Returns", from, to).GetAwaiter().GetResult();
+                var r2 = repService.GetReportDataAsync("Inventory", from, to).GetAwaiter().GetResult();
+                var r3 = repService.GetReportDataAsync("Reservations", from, to).GetAwaiter().GetResult();
+                var r4 = repService.GetReportDataAsync("Check-ins", from, to).GetAwaiter().GetResult();
+
+                // Test students management
+                var auth = Services.AuthService.Instance;
+                var students = auth.GetStudentsAsync().GetAwaiter().GetResult();
+
+                if (r1.Rows.Count >= 1 && r2.Rows.Count >= 3 && r3.Rows.Count >= 1 && r4.Rows.Count >= 1 && students.Count >= 1)
+                {
+                    Console.WriteLine("REPORTS_TEST_PASS");
+                }
+                else
+                {
+                    Console.WriteLine("REPORTS_TEST_FAIL");
+                }
+                return;
+            }
             if (args.Length > 0 && (args[0] == "--kiosk" || args[0] == "--checkin"))
             {
                 ApplicationConfiguration.Initialize();
