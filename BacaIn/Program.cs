@@ -224,6 +224,69 @@ namespace BacaIn
                 }
                 return;
             }
+            if (args.Length > 0 && args[0] == "--test-all")
+            {
+                Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();
+                Console.WriteLine("ALL_TESTS_STARTING");
+
+                // 1. Auth test
+                var auth = Services.AuthService.Instance;
+                var adminUser = auth.LoginAsync("admin", "admin123").GetAwaiter().GetResult();
+                var studentUser = auth.LoginAsync("aji", "aji123").GetAwaiter().GetResult();
+                if (adminUser == null || !adminUser.IsAdmin || studentUser == null || !studentUser.IsStudent)
+                    throw new Exception("Auth test failed");
+                Console.WriteLine("PASS: Auth");
+
+                // 2. Check-in test
+                var checkinService = Services.CheckInService.Instance;
+                using (var conn = Data.DatabaseContext.Instance.CreateConnection())
+                {
+                    conn.Open();
+                    using var del = new Npgsql.NpgsqlCommand("DELETE FROM check_ins WHERE student_id = '22222222-2222-2222-2222-222222222222' AND checked_in_at::date = CURRENT_DATE;", conn);
+                    del.ExecuteNonQuery();
+                }
+                var checkin = checkinService.CheckInAsync("aji").GetAwaiter().GetResult();
+                bool dupFailed = false;
+                try { checkinService.CheckInAsync("aji").GetAwaiter().GetResult(); } catch { dupFailed = true; }
+                if (checkin == null || !dupFailed) throw new Exception("Check-in test failed");
+                Console.WriteLine("PASS: Check-in");
+
+                // 3. Books test
+                var bookService = Services.BookService.Instance;
+                var books = bookService.SearchBibliographiesAsync().GetAwaiter().GetResult();
+                if (books.Count < 3) throw new Exception("Books test failed");
+                Console.WriteLine("PASS: Books");
+
+                // 4. Loans test
+                var loanService = Services.LoanService.Instance;
+                var availCopies = loanService.GetAvailableExemplarsAsync().GetAwaiter().GetResult();
+                if (availCopies.Count == 0) throw new Exception("No available copies");
+                var ajiLoans = loanService.GetLoansForStudentAsync(studentUser.Id).GetAwaiter().GetResult();
+                var overdueLoan = ajiLoans.Find(x => x.IsOverdue);
+                if (overdueLoan != null)
+                {
+                    var ret = loanService.ReturnLoanAsync(overdueLoan.Id).GetAwaiter().GetResult();
+                    if (!ret.isLate || ret.fineAmount <= 0) throw new Exception("Return fine calculation failed");
+                }
+                Console.WriteLine("PASS: Loans");
+
+                // 5. Reservations test
+                var resService = Services.ReservationService.Instance;
+                var ajiRes = resService.GetStudentReservationsAsync(studentUser.Id).GetAwaiter().GetResult();
+                if (ajiRes.Count == 0) throw new Exception("Reservations test failed");
+                Console.WriteLine("PASS: Reservations");
+
+                // 6. Reports test
+                var repService = Services.ReportService.Instance;
+                var from = DateTime.UtcNow.AddDays(-30);
+                var to = DateTime.UtcNow;
+                var rep = repService.GetReportDataAsync("Loans & Returns", from, to).GetAwaiter().GetResult();
+                if (rep.Rows.Count == 0) throw new Exception("Reports test failed");
+                Console.WriteLine("PASS: Reports");
+
+                Console.WriteLine("ALL_TESTS_PASS");
+                return;
+            }
             if (args.Length > 0 && (args[0] == "--kiosk" || args[0] == "--checkin"))
             {
                 ApplicationConfiguration.Initialize();
