@@ -69,6 +69,38 @@ namespace BacaIn
                 }
                 return;
             }
+            if (args.Length > 0 && args[0] == "--test-books")
+            {
+                Data.DatabaseContext.Instance.MigrateAndSeedAsync().GetAwaiter().GetResult();
+                var bookService = Services.BookService.Instance;
+                var initialBooks = bookService.SearchBibliographiesAsync().GetAwaiter().GetResult();
+
+                var newBook = new Models.Bibliography
+                {
+                    Title = "Test Book Automation",
+                    Author = "Test Author",
+                    Publisher = "Test Publisher",
+                    PublisherYear = 2026,
+                    Isbn = "9781234567897"
+                };
+                var created = bookService.CreateBibliographyAsync(newBook).GetAwaiter().GetResult();
+                var copy = bookService.AddExemplarAsync(created.Id, "TEST-BARCODE-99", "NEW").GetAwaiter().GetResult();
+                var copies = bookService.GetExemplarsAsync(created.Id).GetAwaiter().GetResult();
+                
+                // Clean up test book
+                bookService.DeleteBibliographyAsync(created.Id).GetAwaiter().GetResult();
+                var remaining = bookService.SearchBibliographiesAsync().GetAwaiter().GetResult();
+
+                if (initialBooks.Count >= 3 && created != null && copies.Count == 1 && remaining.Count == initialBooks.Count)
+                {
+                    Console.WriteLine("BOOKS_TEST_PASS");
+                }
+                else
+                {
+                    Console.WriteLine("BOOKS_TEST_FAIL");
+                }
+                return;
+            }
             if (args.Length > 0 && (args[0] == "--kiosk" || args[0] == "--checkin"))
             {
                 ApplicationConfiguration.Initialize();
