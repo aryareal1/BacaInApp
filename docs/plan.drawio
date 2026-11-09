@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram id="8sKXUondNALGtIfxeHiD" name="main">
-    <mxGraphModel dx="3147" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2901" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -281,7 +281,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UBrXU8zMNtVIrfVEL6xN-165" parent="UBrXU8zMNtVIrfVEL6xN-163" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="studentId uuid NOT NULL" vertex="1">
+        <mxCell id="UBrXU8zMNtVIrfVEL6xN-165" parent="UBrXU8zMNtVIrfVEL6xN-163" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="studentId id NOT NULL" vertex="1">
           <mxGeometry height="30" width="210" x="30" as="geometry">
             <mxRectangle height="30" width="210" as="alternateBounds" />
           </mxGeometry>
@@ -323,7 +323,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UBrXU8zMNtVIrfVEL6xN-181" parent="UBrXU8zMNtVIrfVEL6xN-179" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="bibliographyId uuid NOT NULL" vertex="1">
+        <mxCell id="UBrXU8zMNtVIrfVEL6xN-181" parent="UBrXU8zMNtVIrfVEL6xN-179" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="bibliographyId id NOT NULL" vertex="1">
           <mxGeometry height="30" width="410" x="30" as="geometry">
             <mxRectangle height="30" width="410" as="alternateBounds" />
           </mxGeometry>
@@ -430,7 +430,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UBrXU8zMNtVIrfVEL6xN-231" parent="UBrXU8zMNtVIrfVEL6xN-229" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="studentId uuid NOT NULL" vertex="1">
+        <mxCell id="UBrXU8zMNtVIrfVEL6xN-231" parent="UBrXU8zMNtVIrfVEL6xN-229" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="studentId id NOT NULL" vertex="1">
           <mxGeometry height="30" width="290.03" x="30" as="geometry">
             <mxRectangle height="30" width="290.03" as="alternateBounds" />
           </mxGeometry>
@@ -443,7 +443,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UBrXU8zMNtVIrfVEL6xN-234" parent="UBrXU8zMNtVIrfVEL6xN-232" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="exemplarId uuid NOT NULL" vertex="1">
+        <mxCell id="UBrXU8zMNtVIrfVEL6xN-234" parent="UBrXU8zMNtVIrfVEL6xN-232" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="exemplarId id NOT NULL" vertex="1">
           <mxGeometry height="30" width="290.03" x="30" as="geometry">
             <mxRectangle height="30" width="290.03" as="alternateBounds" />
           </mxGeometry>
@@ -550,7 +550,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UBrXU8zMNtVIrfVEL6xN-257" parent="UBrXU8zMNtVIrfVEL6xN-255" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="studentId uuid NOT NULL" vertex="1">
+        <mxCell id="UBrXU8zMNtVIrfVEL6xN-257" parent="UBrXU8zMNtVIrfVEL6xN-255" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="studentId id NOT NULL" vertex="1">
           <mxGeometry height="30" width="470.03" x="30" as="geometry">
             <mxRectangle height="30" width="470.03" as="alternateBounds" />
           </mxGeometry>
@@ -563,7 +563,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UBrXU8zMNtVIrfVEL6xN-260" parent="UBrXU8zMNtVIrfVEL6xN-258" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="bibliographyId uuid NOT NULL" vertex="1">
+        <mxCell id="UBrXU8zMNtVIrfVEL6xN-260" parent="UBrXU8zMNtVIrfVEL6xN-258" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="bibliographyId id NOT NULL" vertex="1">
           <mxGeometry height="30" width="470.03" x="30" as="geometry">
             <mxRectangle height="30" width="470.03" as="alternateBounds" />
           </mxGeometry>
