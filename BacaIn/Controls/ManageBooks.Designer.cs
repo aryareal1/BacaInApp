@@ -74,18 +74,19 @@
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Location = new Point(272, 64);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 23);
+            btnSearch.Size = new Size(28, 23);
             btnSearch.TabIndex = 2;
-            btnSearch.Text = "Search";
+            btnSearch.Text = "🔍";
             btnSearch.TextAlign = ContentAlignment.TopCenter;
             btnSearch.UseVisualStyleBackColor = false;
             // 
             // btnCreate
             // 
+            btnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCreate.BackColor = Color.FromArgb(153, 204, 51);
             btnCreate.BackgroundImageLayout = ImageLayout.None;
             btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.Location = new Point(638, 64);
+            btnCreate.Location = new Point(641, 64);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(97, 23);
             btnCreate.TabIndex = 3;
@@ -94,9 +95,10 @@
             // 
             // btnEdit
             // 
+            btnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnEdit.BackColor = SystemColors.ControlLightLight;
             btnEdit.FlatStyle = FlatStyle.Flat;
-            btnEdit.Location = new Point(604, 64);
+            btnEdit.Location = new Point(607, 64);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(28, 23);
             btnEdit.TabIndex = 4;
@@ -105,9 +107,10 @@
             // 
             // btnDelete
             // 
+            btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnDelete.BackColor = Color.FromArgb(255, 153, 102);
             btnDelete.FlatStyle = FlatStyle.Flat;
-            btnDelete.Location = new Point(570, 64);
+            btnDelete.Location = new Point(573, 64);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(28, 23);
             btnDelete.TabIndex = 5;
@@ -117,6 +120,7 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -127,7 +131,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(724, 324);
+            dataGridView1.Size = new Size(727, 328);
             dataGridView1.TabIndex = 6;
             // 
             // idDataGridViewTextBoxColumn
@@ -196,8 +200,8 @@
             // 
             // ManageBooks
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
+            BackColor = SystemColors.Control;
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);
@@ -207,7 +211,7 @@
             Controls.Add(txtSearch);
             Controls.Add(label1);
             Name = "ManageBooks";
-            Size = new Size(746, 446);
+            Size = new Size(749, 450);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)bookRowBindingSource).EndInit();
             ResumeLayout(false);
