@@ -9,9 +9,13 @@ using System.Text;
 namespace BacaIn.Data;
 
 /// <summary>EF Core database context for the BacaIn catalog.</summary>
-/// <remarks>When no options are supplied (e.g. by <c>dotnet ef</c>), it falls back to appsettings.json.</remarks>
-internal class AppDbContext(DbContextOptions<AppDbContext> options = null!) : DbContext(options)
+/// <remarks>When no options are supplied (e.g. by <c>dotnet ef</c> or the seeder), it falls back to appsettings.json.</remarks>
+internal class AppDbContext : DbContext
 {
+    public AppDbContext() { }
+
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
     public DbSet<User> Users => Set<User>();
     public DbSet<Bibliography> Bibliographies => Set<Bibliography>();
     public DbSet<Exemplar> Exemplars => Set<Exemplar>();
