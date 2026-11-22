@@ -104,6 +104,7 @@
             // 
             btnSignIn.Anchor = AnchorStyles.None;
             btnSignIn.BackColor = Color.FromArgb(94, 186, 69);
+            btnSignIn.Cursor = Cursors.Hand;
             btnSignIn.FlatStyle = FlatStyle.Flat;
             btnSignIn.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSignIn.ForeColor = SystemColors.ControlLightLight;
@@ -113,6 +114,7 @@
             btnSignIn.TabIndex = 6;
             btnSignIn.Text = "Masuk";
             btnSignIn.UseVisualStyleBackColor = false;
+            btnSignIn.Click += btnSignIn_Click;
             // 
             // label5
             // 
@@ -129,6 +131,7 @@
             linkLabel1.Anchor = AnchorStyles.None;
             linkLabel1.AutoSize = true;
             linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.Cursor = Cursors.Hand;
             linkLabel1.LinkColor = Color.FromArgb(39, 132, 57);
             linkLabel1.Location = new Point(175, 331);
             linkLabel1.Name = "linkLabel1";
