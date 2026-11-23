@@ -7,6 +7,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+using BacaIn.Models;
+
 namespace BacaIn
 {
     public partial class AdminForm : Form
@@ -22,6 +24,13 @@ namespace BacaIn
                 manageLoansReturns.ShowLoansForUser(user);
                 SetActiveSidebarItem(sbLoansReturns);
             };
+        }
+
+        public AdminForm(User currentUser) : this()
+        {
+            label5.Text = string.IsNullOrWhiteSpace(currentUser.DisplayName)
+                ? currentUser.Username
+                : currentUser.DisplayName;
         }
 
         public void sbBooks_Click(object sender, EventArgs e)
