@@ -125,7 +125,7 @@ internal static class DatabaseSeeder
     };
 
     /// <summary>Hashes a password as <c>pbkdf2-sha256$iterations$salt$hash</c> (PBKDF2-HMAC-SHA256, 32-byte key).</summary>
-    private static string HashPassword(string password)
+    internal static string HashPassword(string password)
     {
         var salt = RandomNumberGenerator.GetBytes(16);
         var hash = Rfc2898DeriveBytes.Pbkdf2(password, salt, HashIterations, HashAlgorithmName.SHA256, 32);

@@ -16,6 +16,12 @@ namespace BacaIn
         public AdminForm()
         {
             InitializeComponent();
+            manageStudents.OpenLoansRequested += (_, user) =>
+            {
+                manageLoansReturns.BringToFront();
+                manageLoansReturns.ShowLoansForUser(user);
+                SetActiveSidebarItem(sbLoansReturns);
+            };
         }
 
         public void sbBooks_Click(object sender, EventArgs e)
@@ -29,6 +35,20 @@ namespace BacaIn
             manageLoansReturns.BringToFront();
             manageLoansReturns.ShowSelectUser();
             SetActiveSidebarItem(sbLoansReturns);
+        }
+
+        private void sbStudents_Click(object sender, EventArgs e)
+        {
+            manageStudents.BringToFront();
+            manageStudents.LoadStudents();
+            SetActiveSidebarItem(sbStudents);
+        }
+
+        private void sbReports_Click(object sender, EventArgs e)
+        {
+            viewReports.BringToFront();
+            viewReports.LoadReport();
+            SetActiveSidebarItem(sbReports);
         }
 
         private void SetActiveSidebarItem(TableLayoutPanel item)

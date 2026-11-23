@@ -32,6 +32,15 @@ public partial class ManageLoansReturns : UserControl
         selectUser.BringToFront();
     }
 
+    /// <summary>Opens the loans &amp; returns view directly for the specified student.</summary>
+    public void ShowLoansForUser(User user)
+    {
+        _currentUser = user;
+        txtSearch.Clear();
+        pnlMain.BringToFront();
+        LoadLoans(user);
+    }
+
     private void SelectUser_UserSelected(object? sender, EventArgs e)
     {
         if (selectUser.SelectedUser is not { } user)

@@ -47,6 +47,8 @@
             label1 = new Label();
             manageBooks = new BacaIn.Controls.ManageBooks();
             manageLoansReturns = new BacaIn.Controls.ManageLoansReturns();
+            manageStudents = new BacaIn.Controls.ManageStudents();
+            viewReports = new BacaIn.Controls.ViewReports();
             pnlSidebaar.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -135,6 +137,7 @@
             sbReports.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             sbReports.Controls.Add(pictureBox4, 0, 0);
             sbReports.Controls.Add(label4, 1, 0);
+            sbReports.Cursor = Cursors.Hand;
             sbReports.Location = new Point(0, 102);
             sbReports.Name = "sbReports";
             sbReports.Padding = new Padding(10, 3, 10, 3);
@@ -143,6 +146,7 @@
             sbReports.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             sbReports.Size = new Size(187, 34);
             sbReports.TabIndex = 3;
+            sbReports.Click += sbReports_Click;
             // 
             // pictureBox4
             // 
@@ -154,6 +158,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += sbReports_Click;
             // 
             // label4
             // 
@@ -166,6 +171,7 @@
             label4.TabIndex = 1;
             label4.Text = "Reports";
             label4.TextAlign = ContentAlignment.MiddleLeft;
+            label4.Click += sbReports_Click;
             // 
             // sbStudents
             // 
@@ -175,6 +181,7 @@
             sbStudents.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             sbStudents.Controls.Add(pictureBox3, 0, 0);
             sbStudents.Controls.Add(label3, 1, 0);
+            sbStudents.Cursor = Cursors.Hand;
             sbStudents.Location = new Point(0, 68);
             sbStudents.Name = "sbStudents";
             sbStudents.Padding = new Padding(10, 3, 10, 3);
@@ -183,6 +190,7 @@
             sbStudents.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             sbStudents.Size = new Size(187, 34);
             sbStudents.TabIndex = 2;
+            sbStudents.Click += sbStudents_Click;
             // 
             // pictureBox3
             // 
@@ -194,6 +202,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += sbStudents_Click;
             // 
             // label3
             // 
@@ -206,6 +215,7 @@
             label3.TabIndex = 1;
             label3.Text = "Students";
             label3.TextAlign = ContentAlignment.MiddleLeft;
+            label3.Click += sbStudents_Click;
             // 
             // sbLoansReturns
             // 
@@ -311,6 +321,24 @@
             manageLoansReturns.Size = new Size(749, 450);
             manageLoansReturns.TabIndex = 2;
             // 
+            // manageStudents
+            // 
+            manageStudents.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            manageStudents.BackColor = SystemColors.Control;
+            manageStudents.Location = new Point(187, 0);
+            manageStudents.Name = "manageStudents";
+            manageStudents.Size = new Size(749, 450);
+            manageStudents.TabIndex = 3;
+            // 
+            // viewReports
+            // 
+            viewReports.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            viewReports.BackColor = SystemColors.Control;
+            viewReports.Location = new Point(187, 0);
+            viewReports.Name = "viewReports";
+            viewReports.Size = new Size(749, 450);
+            viewReports.TabIndex = 4;
+            // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -318,6 +346,8 @@
             ClientSize = new Size(936, 450);
             Controls.Add(manageBooks);
             Controls.Add(manageLoansReturns);
+            Controls.Add(manageStudents);
+            Controls.Add(viewReports);
             Controls.Add(pnlSidebaar);
             Name = "AdminForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -363,5 +393,7 @@
         private PictureBox pbLogout;
         private Controls.ManageBooks manageBooks;
         private Controls.ManageLoansReturns manageLoansReturns;
+        private Controls.ManageStudents manageStudents;
+        private Controls.ViewReports viewReports;
     }
 }
