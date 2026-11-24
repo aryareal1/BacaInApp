@@ -28,7 +28,9 @@ namespace BacaIn.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            lblPrompt = new Label();
             lblStudent = new Label();
+            pbStudent = new CircularPictureBox();
             txtSearch = new TextBox();
             btnSearch = new Button();
             dgvExemplars = new DataGridView();
@@ -41,18 +43,41 @@ namespace BacaIn.Controls
             lblDueInfo = new Label();
             btnCreate = new Button();
             btnCancel = new Button();
+            ((System.ComponentModel.ISupportInitialize)pbStudent).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvExemplars).BeginInit();
             SuspendLayout();
             // 
+            // lblPrompt
+            // 
+            lblPrompt.AutoSize = true;
+            lblPrompt.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPrompt.Location = new Point(14, 14);
+            lblPrompt.Name = "lblPrompt";
+            lblPrompt.Size = new Size(134, 17);
+            lblPrompt.TabIndex = 0;
+            lblPrompt.Text = "Select an exemplar";
+            // 
             // lblStudent
             // 
-            lblStudent.AutoSize = true;
+            lblStudent.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblStudent.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStudent.Location = new Point(14, 14);
+            lblStudent.Location = new Point(360, 11);
             lblStudent.Name = "lblStudent";
-            lblStudent.Size = new Size(60, 17);
-            lblStudent.TabIndex = 0;
-            lblStudent.Text = "Student:";
+            lblStudent.Size = new Size(234, 24);
+            lblStudent.TabIndex = 7;
+            lblStudent.Text = "-";
+            lblStudent.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // pbStudent
+            // 
+            pbStudent.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pbStudent.Image = Properties.Resources.pfp;
+            pbStudent.Location = new Point(600, 11);
+            pbStudent.Name = "pbStudent";
+            pbStudent.Size = new Size(24, 24);
+            pbStudent.SizeMode = PictureBoxSizeMode.Zoom;
+            pbStudent.TabIndex = 8;
+            pbStudent.TabStop = false;
             // 
             // txtSearch
             // 
@@ -210,7 +235,9 @@ namespace BacaIn.Controls
             Controls.Add(dgvExemplars);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
+            Controls.Add(pbStudent);
             Controls.Add(lblStudent);
+            Controls.Add(lblPrompt);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -219,6 +246,7 @@ namespace BacaIn.Controls
             StartPosition = FormStartPosition.CenterParent;
             Text = "Create Loan";
             Load += CreateLoanDialog_Load;
+            ((System.ComponentModel.ISupportInitialize)pbStudent).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvExemplars).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -226,7 +254,9 @@ namespace BacaIn.Controls
 
         #endregion
 
+        private Label lblPrompt;
         private Label lblStudent;
+        private CircularPictureBox pbStudent;
         private TextBox txtSearch;
         private Button btnSearch;
         private DataGridView dgvExemplars;

@@ -23,7 +23,7 @@ public partial class CreateLoanDialog : Form
         _studentName = studentName;
         InitializeComponent();
 
-        lblStudent.Text = $"Student: {studentName}";
+        lblStudent.Text = studentName;
         lblDueInfo.Text = $"Due date: {DateTime.Now.AddDays(LoanDurationDays):yyyy-MM-dd} ({LoanDurationDays} days)";
     }
 
