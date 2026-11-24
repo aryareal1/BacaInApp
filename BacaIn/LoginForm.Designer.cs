@@ -37,6 +37,8 @@
             btnSignIn = new Button();
             label5 = new Label();
             linkLabel1 = new LinkLabel();
+            pbLogo = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             SuspendLayout();
             // 
             // txtUsername
@@ -140,12 +142,24 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Contact administrator";
             // 
+            // pbLogo
+            // 
+            pbLogo.Anchor = AnchorStyles.None;
+            pbLogo.Image = Properties.Resources.logo;
+            pbLogo.Location = new Point(151, 20);
+            pbLogo.Name = "pbLogo";
+            pbLogo.Size = new Size(48, 48);
+            pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pbLogo.TabIndex = 9;
+            pbLogo.TabStop = false;
+            // 
             // LoginForm
             // 
             AcceptButton = btnSignIn;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(350, 387);
+            Controls.Add(pbLogo);
             Controls.Add(linkLabel1);
             Controls.Add(label5);
             Controls.Add(btnSignIn);
@@ -156,17 +170,20 @@
             Controls.Add(label1);
             Controls.Add(txtUsername);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = Properties.Resources.app;
             MaximizeBox = false;
             MinimumSize = new Size(366, 426);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BacaIn App";
+            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private PictureBox pbLogo;
         private TextBox txtUsername;
         private Label label1;
         private Label label2;

@@ -35,6 +35,7 @@ namespace BacaIn
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(936, 450);
+            Icon = Properties.Resources.app;
             Name = "StudentForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BacaIn App - Student";

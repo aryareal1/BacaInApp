@@ -350,6 +350,7 @@
             Controls.Add(manageStudents);
             Controls.Add(viewReports);
             Controls.Add(pnlSidebaar);
+            Icon = Properties.Resources.app;
             Name = "AdminForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BacaIn App";
