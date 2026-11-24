@@ -68,6 +68,7 @@ namespace BacaIn.Controls
             // 
             // txtIsbn
             // 
+            txtIsbn.BorderStyle = BorderStyle.FixedSingle;
             txtIsbn.Location = new Point(126, 16);
             txtIsbn.MaxLength = 13;
             txtIsbn.Name = "txtIsbn";
@@ -108,6 +109,7 @@ namespace BacaIn.Controls
             // 
             // txtTitle
             // 
+            txtTitle.BorderStyle = BorderStyle.FixedSingle;
             txtTitle.Location = new Point(126, 62);
             txtTitle.MaxLength = 255;
             txtTitle.Name = "txtTitle";
@@ -125,6 +127,7 @@ namespace BacaIn.Controls
             // 
             // txtAuthor
             // 
+            txtAuthor.BorderStyle = BorderStyle.FixedSingle;
             txtAuthor.Location = new Point(126, 91);
             txtAuthor.MaxLength = 255;
             txtAuthor.Name = "txtAuthor";
@@ -142,6 +145,7 @@ namespace BacaIn.Controls
             // 
             // txtPublisher
             // 
+            txtPublisher.BorderStyle = BorderStyle.FixedSingle;
             txtPublisher.Location = new Point(126, 120);
             txtPublisher.MaxLength = 255;
             txtPublisher.Name = "txtPublisher";
@@ -159,6 +163,7 @@ namespace BacaIn.Controls
             // 
             // txtYear
             // 
+            txtYear.BorderStyle = BorderStyle.FixedSingle;
             txtYear.Location = new Point(126, 149);
             txtYear.MaxLength = 4;
             txtYear.Name = "txtYear";
@@ -178,6 +183,7 @@ namespace BacaIn.Controls
             // txtDescription
             // 
             txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            txtDescription.BorderStyle = BorderStyle.FixedSingle;
             txtDescription.Location = new Point(126, 178);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
@@ -198,6 +204,7 @@ namespace BacaIn.Controls
             // txtCoverUrl
             // 
             txtCoverUrl.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtCoverUrl.BorderStyle = BorderStyle.FixedSingle;
             txtCoverUrl.Location = new Point(126, 317);
             txtCoverUrl.Name = "txtCoverUrl";
             txtCoverUrl.PlaceholderText = "Image path or URL";
@@ -336,6 +343,7 @@ namespace BacaIn.Controls
             // BookDialog
             // 
             AcceptButton = btnSave;
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancel;
             ClientSize = new Size(760, 410);

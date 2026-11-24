@@ -53,6 +53,7 @@ namespace BacaIn.Controls
             // txtUsername
             // 
             txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
             txtUsername.Location = new Point(116, 16);
             txtUsername.MaxLength = 255;
             txtUsername.Name = "txtUsername";
@@ -71,6 +72,7 @@ namespace BacaIn.Controls
             // txtDisplayName
             // 
             txtDisplayName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtDisplayName.BorderStyle = BorderStyle.FixedSingle;
             txtDisplayName.Location = new Point(116, 45);
             txtDisplayName.MaxLength = 255;
             txtDisplayName.Name = "txtDisplayName";
@@ -89,6 +91,7 @@ namespace BacaIn.Controls
             // txtPassword
             // 
             txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.Location = new Point(116, 74);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(276, 23);
@@ -107,6 +110,7 @@ namespace BacaIn.Controls
             // txtAvatarUrl
             // 
             txtAvatarUrl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtAvatarUrl.BorderStyle = BorderStyle.FixedSingle;
             txtAvatarUrl.Location = new Point(116, 103);
             txtAvatarUrl.Name = "txtAvatarUrl";
             txtAvatarUrl.PlaceholderText = "Image path or URL";
@@ -155,6 +159,7 @@ namespace BacaIn.Controls
             // StudentDialog
             // 
             AcceptButton = btnSave;
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancel;
             ClientSize = new Size(408, 192);

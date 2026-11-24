@@ -28,6 +28,9 @@ namespace BacaIn.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             btnEdit = new Button();
             btnCreate = new Button();
             btnSearch = new Button();
@@ -49,7 +52,7 @@ namespace BacaIn.Controls
             btnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnEdit.BackColor = SystemColors.ControlLightLight;
             btnEdit.FlatStyle = FlatStyle.Flat;
-            btnEdit.Location = new Point(539, 0);
+            btnEdit.Location = new Point(530, 0);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(78, 23);
             btnEdit.TabIndex = 12;
@@ -63,9 +66,9 @@ namespace BacaIn.Controls
             btnCreate.BackColor = Color.FromArgb(153, 204, 51);
             btnCreate.BackgroundImageLayout = ImageLayout.None;
             btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.Location = new Point(623, 0);
+            btnCreate.Location = new Point(614, 0);
             btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(104, 23);
+            btnCreate.Size = new Size(113, 23);
             btnCreate.TabIndex = 11;
             btnCreate.Text = "➕ Create Loan";
             btnCreate.UseVisualStyleBackColor = false;
@@ -129,6 +132,7 @@ namespace BacaIn.Controls
             // pbSelectedUser
             // 
             pbSelectedUser.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pbSelectedUser.BackColor = Color.Transparent;
             pbSelectedUser.Image = Properties.Resources.pfp;
             pbSelectedUser.Location = new Point(714, 9);
             pbSelectedUser.Name = "pbSelectedUser";
@@ -153,31 +157,28 @@ namespace BacaIn.Controls
             // 
             // dataGridView1
             // 
-            DataGridViewCellStyle alternatingStyle = new DataGridViewCellStyle();
-            alternatingStyle.BackColor = Color.FromArgb(236, 246, 226);
-            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
-            headerStyle.BackColor = Color.FromArgb(117, 194, 59);
-            headerStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            headerStyle.ForeColor = Color.Black;
-            headerStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
-            headerStyle.SelectionForeColor = Color.Black;
-            DataGridViewCellStyle rowStyle = new DataGridViewCellStyle();
-            rowStyle.BackColor = Color.White;
-            rowStyle.ForeColor = Color.Black;
-            rowStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
-            rowStyle.SelectionForeColor = Color.Black;
             dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AlternatingRowsDefaultCellStyle = alternatingStyle;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(236, 246, 226);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
-            dataGridView1.ColumnHeadersDefaultCellStyle = headerStyle;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(117, 194, 59);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(0, 37);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.RowsDefaultCellStyle = rowStyle;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(727, 328);
             dataGridView1.TabIndex = 13;

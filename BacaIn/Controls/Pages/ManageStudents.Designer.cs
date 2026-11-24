@@ -28,6 +28,9 @@ namespace BacaIn.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             txtSearch = new TextBox();
@@ -37,12 +40,6 @@ namespace BacaIn.Controls
             btnEdit = new Button();
             btnCreate = new Button();
             dataGridView1 = new DataGridView();
-            colId = new DataGridViewTextBoxColumn();
-            colUsername = new DataGridViewTextBoxColumn();
-            colDisplayName = new DataGridViewTextBoxColumn();
-            colActiveLoans = new DataGridViewTextBoxColumn();
-            colOverdueLoans = new DataGridViewTextBoxColumn();
-            colCheckIns = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -52,7 +49,7 @@ namespace BacaIn.Controls
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(6, 5);
             label1.Name = "label1";
-            label1.Size = new Size(164, 25);
+            label1.Size = new Size(168, 25);
             label1.TabIndex = 0;
             label1.Text = "Manage Students";
             // 
@@ -62,7 +59,7 @@ namespace BacaIn.Controls
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label2.Location = new Point(9, 30);
             label2.Name = "label2";
-            label2.Size = new Size(227, 15);
+            label2.Size = new Size(240, 15);
             label2.TabIndex = 1;
             label2.Text = "Manage student accounts and library access";
             // 
@@ -94,9 +91,9 @@ namespace BacaIn.Controls
             btnLoans.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnLoans.BackColor = SystemColors.ControlLightLight;
             btnLoans.FlatStyle = FlatStyle.Flat;
-            btnLoans.Location = new Point(455, 64);
+            btnLoans.Location = new Point(439, 64);
             btnLoans.Name = "btnLoans";
-            btnLoans.Size = new Size(106, 23);
+            btnLoans.Size = new Size(114, 23);
             btnLoans.TabIndex = 4;
             btnLoans.Text = "Loans && Returns";
             btnLoans.UseVisualStyleBackColor = false;
@@ -107,7 +104,7 @@ namespace BacaIn.Controls
             btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnDelete.BackColor = Color.FromArgb(255, 153, 102);
             btnDelete.FlatStyle = FlatStyle.Flat;
-            btnDelete.Location = new Point(567, 64);
+            btnDelete.Location = new Point(559, 64);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(28, 23);
             btnDelete.TabIndex = 5;
@@ -120,7 +117,7 @@ namespace BacaIn.Controls
             btnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnEdit.BackColor = SystemColors.ControlLightLight;
             btnEdit.FlatStyle = FlatStyle.Flat;
-            btnEdit.Location = new Point(601, 64);
+            btnEdit.Location = new Point(593, 64);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(28, 23);
             btnEdit.TabIndex = 6;
@@ -133,9 +130,9 @@ namespace BacaIn.Controls
             btnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCreate.BackColor = Color.FromArgb(153, 204, 51);
             btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.Location = new Point(635, 64);
+            btnCreate.Location = new Point(627, 64);
             btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(103, 23);
+            btnCreate.Size = new Size(111, 23);
             btnCreate.TabIndex = 7;
             btnCreate.Text = "➕ Add Student";
             btnCreate.UseVisualStyleBackColor = false;
@@ -143,83 +140,35 @@ namespace BacaIn.Controls
             // 
             // dataGridView1
             // 
-            DataGridViewCellStyle alternatingStyle = new DataGridViewCellStyle();
-            alternatingStyle.BackColor = Color.FromArgb(236, 246, 226);
-            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
-            headerStyle.BackColor = Color.FromArgb(117, 194, 59);
-            headerStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            headerStyle.ForeColor = Color.Black;
-            headerStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
-            headerStyle.SelectionForeColor = Color.Black;
-            DataGridViewCellStyle rowStyle = new DataGridViewCellStyle();
-            rowStyle.BackColor = Color.White;
-            rowStyle.ForeColor = Color.Black;
-            rowStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
-            rowStyle.SelectionForeColor = Color.Black;
             dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AlternatingRowsDefaultCellStyle = alternatingStyle;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(236, 246, 226);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
-            dataGridView1.ColumnHeadersDefaultCellStyle = headerStyle;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(117, 194, 59);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            dataGridViewCellStyle5.SelectionForeColor = Color.Black;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colId, colUsername, colDisplayName, colActiveLoans, colOverdueLoans, colCheckIns });
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(11, 100);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowsDefaultCellStyle = rowStyle;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(727, 328);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
-            // 
-            // colId
-            // 
-            colId.DataPropertyName = "Id";
-            colId.HeaderText = "Id";
-            colId.Name = "colId";
-            colId.ReadOnly = true;
-            colId.Visible = false;
-            // 
-            // colUsername
-            // 
-            colUsername.DataPropertyName = "Username";
-            colUsername.HeaderText = "Username";
-            colUsername.Name = "colUsername";
-            colUsername.ReadOnly = true;
-            // 
-            // colDisplayName
-            // 
-            colDisplayName.DataPropertyName = "DisplayName";
-            colDisplayName.HeaderText = "Display Name";
-            colDisplayName.Name = "colDisplayName";
-            colDisplayName.ReadOnly = true;
-            // 
-            // colActiveLoans
-            // 
-            colActiveLoans.DataPropertyName = "ActiveLoans";
-            colActiveLoans.HeaderText = "Active Loans";
-            colActiveLoans.Name = "colActiveLoans";
-            colActiveLoans.ReadOnly = true;
-            // 
-            // colOverdueLoans
-            // 
-            colOverdueLoans.DataPropertyName = "OverdueLoans";
-            colOverdueLoans.HeaderText = "Overdue";
-            colOverdueLoans.Name = "colOverdueLoans";
-            colOverdueLoans.ReadOnly = true;
-            // 
-            // colCheckIns
-            // 
-            colCheckIns.DataPropertyName = "CheckIns";
-            colCheckIns.HeaderText = "Check-ins";
-            colCheckIns.Name = "colCheckIns";
-            colCheckIns.ReadOnly = true;
             // 
             // ManageStudents
             // 
