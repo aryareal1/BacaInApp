@@ -55,6 +55,7 @@
             btnSearch.Text = "🔍";
             btnSearch.TextAlign = ContentAlignment.TopCenter;
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // txtSearch
             // 
@@ -64,6 +65,7 @@
             txtSearch.PlaceholderText = "Search user...";
             txtSearch.Size = new Size(255, 23);
             txtSearch.TabIndex = 11;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // flowLayoutPanel1
             // 

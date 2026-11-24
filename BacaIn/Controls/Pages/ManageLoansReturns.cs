@@ -16,19 +16,24 @@ public partial class ManageLoansReturns : UserControl
     {
         InitializeComponent();
         dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        selectUser.UserSelected += SelectUser_UserSelected;
-        btnSearch.Click += (_, _) => ApplyFilter();
-        txtSearch.TextChanged += (_, _) => ApplyFilter();
-        btnCreate.Click += (_, _) => CreateLoan();
-        btnEdit.Click += (_, _) => ReturnSelectedLoan();
-        dataGridView1.SelectionChanged += (_, _) => UpdateActionButtons();
-
         UpdateActionButtons();
     }
+
+    private void btnSearch_Click(object? sender, EventArgs e) => ApplyFilter();
+
+    private void txtSearch_TextChanged(object? sender, EventArgs e) => ApplyFilter();
+
+    private void btnCreate_Click(object? sender, EventArgs e) => CreateLoan();
+
+    private void btnEdit_Click(object? sender, EventArgs e) => ReturnSelectedLoan();
+
+    private void dataGridView1_SelectionChanged(object? sender, EventArgs e) => UpdateActionButtons();
 
     /// <summary>Shows the select user control and brings it to the front.</summary>
     public void ShowSelectUser()
     {
+        lblSelectedUser.Visible = false;
+        pbSelectedUser.Visible = false;
         selectUser.BringToFront();
     }
 
@@ -36,6 +41,9 @@ public partial class ManageLoansReturns : UserControl
     public void ShowLoansForUser(User user)
     {
         _currentUser = user;
+        lblSelectedUser.Text = string.IsNullOrWhiteSpace(user.DisplayName) ? user.Username : user.DisplayName;
+        lblSelectedUser.Visible = true;
+        pbSelectedUser.Visible = true;
         txtSearch.Clear();
         pnlMain.BringToFront();
         LoadLoans(user);
@@ -46,10 +54,7 @@ public partial class ManageLoansReturns : UserControl
         if (selectUser.SelectedUser is not { } user)
             return;
 
-        _currentUser = user;
-        txtSearch.Clear();
-        pnlMain.BringToFront();
-        LoadLoans(user);
+        ShowLoansForUser(user);
     }
 
     private void LoadLoans(User user)

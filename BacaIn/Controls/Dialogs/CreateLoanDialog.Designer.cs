@@ -81,19 +81,36 @@ namespace BacaIn.Controls
             // 
             // dgvExemplars
             // 
+            DataGridViewCellStyle alternatingStyle = new DataGridViewCellStyle();
+            alternatingStyle.BackColor = Color.FromArgb(236, 246, 226);
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+            headerStyle.BackColor = Color.FromArgb(117, 194, 59);
+            headerStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            headerStyle.ForeColor = Color.Black;
+            headerStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            headerStyle.SelectionForeColor = Color.Black;
+            DataGridViewCellStyle rowStyle = new DataGridViewCellStyle();
+            rowStyle.BackColor = Color.White;
+            rowStyle.ForeColor = Color.Black;
+            rowStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            rowStyle.SelectionForeColor = Color.Black;
             dgvExemplars.AllowUserToAddRows = false;
             dgvExemplars.AllowUserToDeleteRows = false;
+            dgvExemplars.AlternatingRowsDefaultCellStyle = alternatingStyle;
             dgvExemplars.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvExemplars.AutoGenerateColumns = false;
             dgvExemplars.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvExemplars.BackgroundColor = SystemColors.ControlLight;
+            dgvExemplars.ColumnHeadersDefaultCellStyle = headerStyle;
             dgvExemplars.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvExemplars.Columns.AddRange(new DataGridViewColumn[] { colId, colBarcode, colTitle, colAuthor, colCondition, colStatus });
+            dgvExemplars.EnableHeadersVisualStyles = false;
             dgvExemplars.Location = new Point(14, 75);
             dgvExemplars.MultiSelect = false;
             dgvExemplars.Name = "dgvExemplars";
             dgvExemplars.ReadOnly = true;
             dgvExemplars.RowHeadersVisible = false;
+            dgvExemplars.RowsDefaultCellStyle = rowStyle;
             dgvExemplars.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvExemplars.Size = new Size(610, 268);
             dgvExemplars.TabIndex = 3;

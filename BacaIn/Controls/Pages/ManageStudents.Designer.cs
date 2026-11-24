@@ -74,6 +74,7 @@ namespace BacaIn.Controls
             txtSearch.PlaceholderText = "Search username or display name...";
             txtSearch.Size = new Size(255, 23);
             txtSearch.TabIndex = 2;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnSearch
             // 
@@ -86,6 +87,7 @@ namespace BacaIn.Controls
             btnSearch.Text = "🔍";
             btnSearch.TextAlign = ContentAlignment.TopCenter;
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnLoans
             // 
@@ -98,6 +100,7 @@ namespace BacaIn.Controls
             btnLoans.TabIndex = 4;
             btnLoans.Text = "Loans && Returns";
             btnLoans.UseVisualStyleBackColor = false;
+            btnLoans.Click += btnLoans_Click;
             // 
             // btnDelete
             // 
@@ -110,6 +113,7 @@ namespace BacaIn.Controls
             btnDelete.TabIndex = 5;
             btnDelete.Text = "🗑️";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnEdit
             // 
@@ -122,6 +126,7 @@ namespace BacaIn.Controls
             btnEdit.TabIndex = 6;
             btnEdit.Text = "✏️";
             btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnCreate
             // 
@@ -134,24 +139,44 @@ namespace BacaIn.Controls
             btnCreate.TabIndex = 7;
             btnCreate.Text = "➕ Add Student";
             btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += btnCreate_Click;
             // 
             // dataGridView1
             // 
+            DataGridViewCellStyle alternatingStyle = new DataGridViewCellStyle();
+            alternatingStyle.BackColor = Color.FromArgb(236, 246, 226);
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+            headerStyle.BackColor = Color.FromArgb(117, 194, 59);
+            headerStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            headerStyle.ForeColor = Color.Black;
+            headerStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            headerStyle.SelectionForeColor = Color.Black;
+            DataGridViewCellStyle rowStyle = new DataGridViewCellStyle();
+            rowStyle.BackColor = Color.White;
+            rowStyle.ForeColor = Color.Black;
+            rowStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            rowStyle.SelectionForeColor = Color.Black;
             dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AlternatingRowsDefaultCellStyle = alternatingStyle;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
+            dataGridView1.ColumnHeadersDefaultCellStyle = headerStyle;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colId, colUsername, colDisplayName, colActiveLoans, colOverdueLoans, colCheckIns });
+            dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(11, 100);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowsDefaultCellStyle = rowStyle;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(727, 328);
             dataGridView1.TabIndex = 8;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // colId
             // 

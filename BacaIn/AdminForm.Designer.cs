@@ -329,6 +329,7 @@
             manageStudents.Name = "manageStudents";
             manageStudents.Size = new Size(749, 450);
             manageStudents.TabIndex = 3;
+            manageStudents.OpenLoansRequested += manageStudents_OpenLoansRequested;
             // 
             // viewReports
             // 

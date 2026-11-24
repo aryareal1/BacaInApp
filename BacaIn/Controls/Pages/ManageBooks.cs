@@ -13,21 +13,26 @@ public partial class ManageBooks : UserControl
     {
         InitializeComponent();
         dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-        btnSearch.Click += (_, _) => ApplyFilter();
-        txtSearch.TextChanged += (_, _) => ApplyFilter();
-        btnCreate.Click += (_, _) => CreateBook();
-        btnEdit.Click += (_, _) => EditSelectedBook();
-        btnDelete.Click += (_, _) => DeleteSelectedBook();
-        dataGridView1.CellDoubleClick += (_, e) =>
-        {
-            if (e.RowIndex >= 0)
-                EditSelectedBook();
-        };
-        dataGridView1.SelectionChanged += (_, _) => UpdateActionButtons();
-
         UpdateActionButtons();
     }
+
+    private void btnSearch_Click(object? sender, EventArgs e) => ApplyFilter();
+
+    private void txtSearch_TextChanged(object? sender, EventArgs e) => ApplyFilter();
+
+    private void btnCreate_Click(object? sender, EventArgs e) => CreateBook();
+
+    private void btnEdit_Click(object? sender, EventArgs e) => EditSelectedBook();
+
+    private void btnDelete_Click(object? sender, EventArgs e) => DeleteSelectedBook();
+
+    private void dataGridView1_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
+    {
+        if (e.RowIndex >= 0)
+            EditSelectedBook();
+    }
+
+    private void dataGridView1_SelectionChanged(object? sender, EventArgs e) => UpdateActionButtons();
 
     protected override void OnLoad(EventArgs e)
     {

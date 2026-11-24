@@ -14,9 +14,11 @@ public partial class SelectUser : UserControl
     public SelectUser()
     {
         InitializeComponent();
-        btnSearch.Click += (_, _) => ApplyFilter();
-        txtSearch.TextChanged += (_, _) => ApplyFilter();
     }
+
+    private void btnSearch_Click(object? sender, EventArgs e) => ApplyFilter();
+
+    private void txtSearch_TextChanged(object? sender, EventArgs e) => ApplyFilter();
 
     /// <summary>Most recently clicked student; <c>null</c> until a card is clicked.</summary>
     public User? SelectedUser { get; private set; }

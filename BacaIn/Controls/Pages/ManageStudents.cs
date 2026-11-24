@@ -14,22 +14,28 @@ public partial class ManageStudents : UserControl
     public ManageStudents()
     {
         InitializeComponent();
-
-        btnSearch.Click += (_, _) => ApplyFilter();
-        txtSearch.TextChanged += (_, _) => ApplyFilter();
-        btnCreate.Click += (_, _) => CreateStudent();
-        btnEdit.Click += (_, _) => EditSelectedStudent();
-        btnDelete.Click += (_, _) => DeleteSelectedStudent();
-        btnLoans.Click += (_, _) => OpenLoansForSelectedStudent();
-        dataGridView1.CellDoubleClick += (_, e) =>
-        {
-            if (e.RowIndex >= 0)
-                EditSelectedStudent();
-        };
-        dataGridView1.SelectionChanged += (_, _) => UpdateActionButtons();
-
         UpdateActionButtons();
     }
+
+    private void btnSearch_Click(object? sender, EventArgs e) => ApplyFilter();
+
+    private void txtSearch_TextChanged(object? sender, EventArgs e) => ApplyFilter();
+
+    private void btnCreate_Click(object? sender, EventArgs e) => CreateStudent();
+
+    private void btnEdit_Click(object? sender, EventArgs e) => EditSelectedStudent();
+
+    private void btnDelete_Click(object? sender, EventArgs e) => DeleteSelectedStudent();
+
+    private void btnLoans_Click(object? sender, EventArgs e) => OpenLoansForSelectedStudent();
+
+    private void dataGridView1_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
+    {
+        if (e.RowIndex >= 0)
+            EditSelectedStudent();
+    }
+
+    private void dataGridView1_SelectionChanged(object? sender, EventArgs e) => UpdateActionButtons();
 
     protected override void OnLoad(EventArgs e)
     {

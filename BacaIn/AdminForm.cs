@@ -18,12 +18,13 @@ namespace BacaIn
         public AdminForm()
         {
             InitializeComponent();
-            manageStudents.OpenLoansRequested += (_, user) =>
-            {
-                manageLoansReturns.BringToFront();
-                manageLoansReturns.ShowLoansForUser(user);
-                SetActiveSidebarItem(sbLoansReturns);
-            };
+        }
+
+        private void manageStudents_OpenLoansRequested(object? sender, User user)
+        {
+            manageLoansReturns.BringToFront();
+            manageLoansReturns.ShowLoansForUser(user);
+            SetActiveSidebarItem(sbLoansReturns);
         }
 
         public AdminForm(User currentUser) : this()

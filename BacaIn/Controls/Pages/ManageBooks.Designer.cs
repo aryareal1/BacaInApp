@@ -1,4 +1,4 @@
-﻿namespace BacaIn.Controls
+namespace BacaIn.Controls
 {
     partial class ManageBooks
     {
@@ -67,6 +67,7 @@
             txtSearch.PlaceholderText = "Search title, author, etc...";
             txtSearch.Size = new Size(255, 23);
             txtSearch.TabIndex = 1;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnSearch
             // 
@@ -79,6 +80,7 @@
             btnSearch.Text = "🔍";
             btnSearch.TextAlign = ContentAlignment.TopCenter;
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnCreate
             // 
@@ -92,6 +94,7 @@
             btnCreate.TabIndex = 3;
             btnCreate.Text = "➕ Add Book";
             btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += btnCreate_Click;
             // 
             // btnEdit
             // 
@@ -104,6 +107,7 @@
             btnEdit.TabIndex = 4;
             btnEdit.Text = "✏️";
             btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnDelete
             // 
@@ -116,23 +120,43 @@
             btnDelete.TabIndex = 5;
             btnDelete.Text = "🗑️";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // dataGridView1
             // 
+            DataGridViewCellStyle alternatingStyle = new DataGridViewCellStyle();
+            alternatingStyle.BackColor = Color.FromArgb(236, 246, 226);
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+            headerStyle.BackColor = Color.FromArgb(117, 194, 59);
+            headerStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            headerStyle.ForeColor = Color.Black;
+            headerStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            headerStyle.SelectionForeColor = Color.Black;
+            DataGridViewCellStyle rowStyle = new DataGridViewCellStyle();
+            rowStyle.BackColor = Color.White;
+            rowStyle.ForeColor = Color.Black;
+            rowStyle.SelectionBackColor = Color.FromArgb(117, 194, 59);
+            rowStyle.SelectionForeColor = Color.Black;
             dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AlternatingRowsDefaultCellStyle = alternatingStyle;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
+            dataGridView1.ColumnHeadersDefaultCellStyle = headerStyle;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, titleDataGridViewTextBoxColumn, authorDataGridViewTextBoxColumn, isbnDataGridViewTextBoxColumn, publisherDataGridViewTextBoxColumn, yearDataGridViewTextBoxColumn, copiesDataGridViewTextBoxColumn });
             dataGridView1.DataSource = bookRowBindingSource;
+            dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(11, 100);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowsDefaultCellStyle = rowStyle;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(727, 328);
             dataGridView1.TabIndex = 6;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // idDataGridViewTextBoxColumn
             // 

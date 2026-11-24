@@ -29,11 +29,13 @@ public partial class ViewReports : UserControl
 
         dtpFrom.Value = DateTime.Today.AddDays(-30);
         dtpTo.Value = DateTime.Today;
-
-        cmbReportType.SelectedIndexChanged += (_, _) => LoadReport();
-        btnApply.Click += (_, _) => LoadReport();
-        btnPrint.Click += (_, _) => PrintReport();
     }
+
+    private void cmbReportType_SelectedIndexChanged(object? sender, EventArgs e) => LoadReport();
+
+    private void btnApply_Click(object? sender, EventArgs e) => LoadReport();
+
+    private void btnPrint_Click(object? sender, EventArgs e) => PrintReport();
 
     protected override void OnLoad(EventArgs e)
     {

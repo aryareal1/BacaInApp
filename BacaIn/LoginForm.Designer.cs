@@ -94,11 +94,11 @@
             // 
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
-            label4.Location = new Point(90, 100);
+            label4.Location = new Point(99, 100);
             label4.Name = "label4";
-            label4.Size = new Size(171, 15);
+            label4.Size = new Size(153, 15);
             label4.TabIndex = 5;
-            label4.Text = "Kelola perpustakaan impianmu";
+            label4.Text = "School library management";
             // 
             // btnSignIn
             // 
@@ -112,7 +112,7 @@
             btnSignIn.Name = "btnSignIn";
             btnSignIn.Size = new Size(255, 41);
             btnSignIn.TabIndex = 6;
-            btnSignIn.Text = "Masuk";
+            btnSignIn.Text = "Sign In";
             btnSignIn.UseVisualStyleBackColor = false;
             btnSignIn.Click += btnSignIn_Click;
             // 
@@ -120,11 +120,11 @@
             // 
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
-            label5.Location = new Point(58, 331);
+            label5.Location = new Point(53, 331);
             label5.Name = "label5";
-            label5.Size = new Size(111, 15);
+            label5.Size = new Size(115, 15);
             label5.TabIndex = 7;
-            label5.Text = "Belum punya akun?";
+            label5.Text = "Don't have account?";
             // 
             // linkLabel1
             // 
@@ -133,12 +133,12 @@
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.Cursor = Cursors.Hand;
             linkLabel1.LinkColor = Color.FromArgb(39, 132, 57);
-            linkLabel1.Location = new Point(175, 331);
+            linkLabel1.Location = new Point(174, 331);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(118, 15);
+            linkLabel1.Size = new Size(123, 15);
             linkLabel1.TabIndex = 8;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "Kontak administrator";
+            linkLabel1.Text = "Contact administrator";
             // 
             // LoginForm
             // 
